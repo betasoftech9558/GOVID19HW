@@ -107,8 +107,8 @@
           </ion-card-content>
           <ion-item>
             <ion-label position="stacked">Full Name :</ion-label>
-            <ion-input placeholder="Full Name" type="text" name="UserName"
-              [(ngModel)]="component.form_registration.model.UserName" #UserName="ngModel" clearInput></ion-input>
+            <ion-input placeholder="Full Name" type="text" name="Name"
+              [(ngModel)]="component.form_registration.model.Name" #Name="ngModel" clearInput></ion-input>
           </ion-item>
 
           <ion-item>
@@ -146,12 +146,6 @@
 
           <ion-row>
             <ion-col>
-              <!-- <ion-button type="button" expand="full" size="default" color="danger"
-                [disabled]="component.form_registration.is_processing"
-                (click)="component.form_registration.on_click_next();">
-                Next
-              </ion-button> -->
-
               <ion-button type="submit" expand="full" size="default" color="danger"
                 [disabled]="component.form_registration.is_processing">
                 Register

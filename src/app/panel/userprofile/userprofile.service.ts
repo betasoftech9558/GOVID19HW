@@ -6,7 +6,7 @@ import { LoginService } from '../login/login.service';
 import { configApp } from '../configs/configApp';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class UserprofileService {
     public service: any = {};
@@ -16,45 +16,43 @@ export class UserprofileService {
         private loginServiceP: LoginService,
     ) { const myThis = this; }
 
-    init() { const myThis = this;
+    init() {
+        const myThis = this;
         myThis.service = {};
         myThis.service.login = myThis.loginServiceP.init();
 
-
-        console.log('configApp ----- ', configApp);
-
-        myThis.service.userprofile_get = ( cb ) => {
+        myThis.service.userprofile_get = (cb) => {
             const userdata = myThis.service.login.getUserSignedinData();
-            if ( !(userdata && userdata.access_token) ) {
+            if (!(userdata && userdata.access_token)) {
                 myThis.service.login.userSignout(true);
             } else {
-                myThis.httpP.post((configApp.SERVER_API_URL).concat('/api/User/GetUserProfile'), {}, {
+                myThis.httpP.post((configApp.SERVER_API_URL).concat('/api/User/GetStaffProfile'), {}, {
                     headers: new HttpHeaders({
                         'Authorization': userdata.access_token,
                     })
-                }).subscribe(( resultP: any ) => {
+                }).subscribe((resultP: any) => {
                     cb(null, resultP);
                     return;
-                }, ( errorP: any ) => {
+                }, (errorP: any) => {
                     cb(((errorP.error) ? errorP.error : errorP), null);
                     return;
                 });
             }
         };
 
-        myThis.service.userprofile_update = ( data_p, cb ) => {
+        myThis.service.userprofile_update = (data_p, cb) => {
             const userdata = myThis.service.login.getUserSignedinData();
-            if ( !(userdata && userdata.access_token) ) {
+            if (!(userdata && userdata.access_token)) {
                 myThis.service.login.userSignout(true);
             } else {
-                myThis.httpP.post((configApp.SERVER_API_URL).concat('/api/User/UpdateUserProfile'), data_p, {
+                myThis.httpP.post((configApp.SERVER_API_URL).concat('/api/User/UpdateStaffProfile'), data_p, {
                     headers: new HttpHeaders({
                         'Authorization': userdata.access_token,
                     })
-                }).subscribe(( resultP: any ) => {
+                }).subscribe((resultP: any) => {
                     cb(null, resultP);
                     return;
-                }, ( errorP: any ) => {
+                }, (errorP: any) => {
                     cb(((errorP.error) ? errorP.error : errorP), null);
                     return;
                 });
