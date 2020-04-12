@@ -16,9 +16,6 @@ export class RegistrationService {
     init() {
         const myThis = this;
         myThis.service = {};
-
-        console.log('configApp ----- ', configApp);
-
         myThis.service.otp_get = (data_p, cb) => {
             myThis.httpP.post((configApp.SERVER_API_URL).concat('/api/User/GetOTP'), data_p).subscribe((resultP: any) => {
                 cb(null, resultP);
@@ -40,7 +37,7 @@ export class RegistrationService {
         };
 
         myThis.service.register_user = (data_p, cb) => {
-            myThis.httpP.post((configApp.SERVER_API_URL).concat('/api/User/RegisterUser'), data_p).subscribe((resultP: any) => {
+            myThis.httpP.post((configApp.SERVER_API_URL).concat('/api/User/RegisterStaff'), data_p).subscribe((resultP: any) => {
                 cb(null, resultP);
                 return;
             }, (errorP: any) => {

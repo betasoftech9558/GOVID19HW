@@ -10,18 +10,13 @@
       <ion-title><strong>GOVID19</strong></ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <!-- <div id="container"></div> -->
   <ion-grid>
-    <!-- <ion-row>
-      <ion-col size-md="6" offset-md="3"> -->
     <form #form_userprofile="ngForm" (ngSubmit)="component.form_userprofile.on_submit(form_userprofile);">
       <ion-card>
         <ion-item lines="full">
           <ion-icon name="person-circle-outline" color="danger"></ion-icon>&nbsp;
           <ion-text color="danger"><strong>BASIC DETAIL</strong></ion-text>
         </ion-item>
-        <!-- <ion-card-content> -->
         <ion-item lines="full">
           <ion-label position="stacked">Name :</ion-label>
           <ion-input type="text" name="UserName" [(ngModel)]="component.form_userprofile.model.UserName"
@@ -29,13 +24,8 @@
         </ion-item>
         <ion-item lines="full">
           <ion-label position="stacked">Date Of Birth :</ion-label>
-          <ion-datetime
-            name="DateofBirth"
-            [(ngModel)]="component.form_userprofile.model.DateofBirth"
-            #DateofBirth="ngModel"
-            pickerFormat="DD-MM-YYYY"
-            displayFormat="DD-MM-YYYY"
-            min="1900" max="2020">
+          <ion-datetime name="DateofBirth" [(ngModel)]="component.form_userprofile.model.DateofBirth"
+            #DateofBirth="ngModel" pickerFormat="DD-MM-YYYY" displayFormat="DD-MM-YYYY" min="1900" max="2020">
           </ion-datetime>
         </ion-item>
 
@@ -51,54 +41,6 @@
             #Pincode="ngModel" clearInput></ion-input>
         </ion-item>
 
-        <!-- </ion-card-content> -->
-      </ion-card>
-      <ion-card>
-        <ion-item lines="full">
-          <ion-icon name="train-outline" color="danger"></ion-icon>&nbsp;
-          <ion-text color="danger"><strong>FOREIGN HISTORY </strong></ion-text>
-        </ion-item>
-        <!-- <ion-card-content> -->
-        <ion-item lines="full">
-          <ion-label position="stacked">Country Name :</ion-label>
-          <ion-input type="text" name="foreignVisit" [(ngModel)]="component.form_userprofile.model.foreignVisit"
-            #foreignVisit="ngModel" clearInput></ion-input>
-        </ion-item>
-
-        <ion-item lines="full">
-          <ion-label position="stacked">Return Days :</ion-label>
-          <ion-input type="number" name="returnDays" [(ngModel)]="component.form_userprofile.model.returnDays"
-            #returnDays="ngModel" clearInput></ion-input>
-        </ion-item>
-        <!-- </ion-card-content> -->
-      </ion-card>
-
-      <ion-card>
-        <ion-item lines="full">
-          <ion-icon name="medical-outline" color="danger"></ion-icon>&nbsp;
-          <ion-text color="danger"><strong>COVID19 SYMPTOMS</strong></ion-text>
-        </ion-item>
-        <!-- <ion-card-content> -->
-        <ion-item lines="full">
-          <ion-label>Cold/Cough</ion-label>
-          <ion-checkbox name="haveCough" [(ngModel)]="component.form_userprofile.model.haveCough" #haveCough="ngModel"
-            color="primary" slot="end" [disabled]="component.form_userprofile.model.disabled_haveCough"></ion-checkbox>
-        </ion-item>
-
-        <ion-item lines="full">
-          <ion-label>Fever</ion-label>
-          <ion-checkbox name="haveFeaver" [(ngModel)]="component.form_userprofile.model.haveFeaver"
-            #haveFeaver="ngModel" color="primary" slot="end"
-            [disabled]="component.form_userprofile.model.disabled_haveFeaver"></ion-checkbox>
-        </ion-item>
-
-        <ion-item lines="full">
-          <ion-label>Shortness of Breath</ion-label>
-          <ion-checkbox name="haveBreathingProblem" [(ngModel)]="component.form_userprofile.model.haveBreathingProblem"
-            #haveBreathingProblem="ngModel" color="primary" slot="end"
-            [disabled]="component.form_userprofile.model.disabled_haveBreathingProblem"></ion-checkbox>
-        </ion-item>
-        <!-- </ion-card-content> -->
         <ion-row>
           <ion-col>
             <ion-button type="button" expand="full" size="default" color="primary"

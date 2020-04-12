@@ -46,11 +46,6 @@ export class RegistrationPage implements OnInit {
         myThis.component.form_registration.model.DateofBirth = '';
         myThis.component.form_registration.model.Address = '';
         myThis.component.form_registration.model.Pincode = '';
-        myThis.component.form_registration.model.foreignVisit = '';
-        myThis.component.form_registration.model.returnDays = '';
-        myThis.component.form_registration.model.haveCough = false;
-        myThis.component.form_registration.model.haveFeaver = false;
-        myThis.component.form_registration.model.haveBreathingProblem = false;
 
         myThis.component.form_registration.otp_get = () => {
             myThis.component.form_registration.is_processing = true;
