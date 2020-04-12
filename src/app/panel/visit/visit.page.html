@@ -21,49 +21,44 @@
       </ion-card>
     </div>
 
-    <div
-      [hidden]="!((component.form_visit_add.is_visible === false) && (component.form_visit_list.is_processing === false) )">
-      <ion-card>
+    <ion-card>
+      <ion-item lines="full">
+        <ion-icon name="list-outline" color="danger"></ion-icon>&nbsp;
+        <ion-text color="danger"><strong>MY VISITS</strong></ion-text>
+      </ion-item>
+
+      <div id="div_visitlist_calender">
         <ion-item lines="full">
-          <ion-icon name="list-outline" color="danger"></ion-icon>&nbsp;
-          <ion-text color="danger"><strong>MY VISITS</strong></ion-text>
-          <ion-button slot="end" color="danger" (click)="component.form_visit_add.on_click_change_view();">Add Visit
+          <ion-text color="danger">{{component.form_visit_list.model.visitDate | date: 'dd-MM-yyyy'}}</ion-text>
+          <ion-button slot="end" color="danger" (click)="VisitListDate.open();">
+            <ion-datetime name="visitDate" [(ngModel)]="component.form_visit_list.model.visitDate" #visitDate="ngModel"
+              #VisitListDate [hidden]="true" pickerFormat="DD-MM-YYYY" displayFormat="DD-MM-YYYY" min="1900" max="2020"
+              (ionChange)="component.form_visit_list.on_change_visitdate();">
+            </ion-datetime>
+            <ion-icon slot="icon-only" name="calendar-sharp"></ion-icon>
           </ion-button>
         </ion-item>
+      </div>
 
-        <div id="div_visitlist_calender">
-          <ion-item lines="full">
-            <ion-text color="danger">{{component.form_visit_list.model.visitDate | date: 'dd-MM-yyyy'}}</ion-text>
-            <ion-button slot="end" color="danger" (click)="VisitListDate.open();">
-              <ion-datetime name="visitDate" [(ngModel)]="component.form_visit_list.model.visitDate"
-                #visitDate="ngModel" #VisitListDate [hidden]="true" pickerFormat="DD-MM-YYYY" displayFormat="DD-MM-YYYY"
-                min="1900" max="2020" (ionChange)="component.form_visit_list.on_change_visitdate();">
-              </ion-datetime>
-              <ion-icon slot="icon-only" name="calendar-sharp"></ion-icon>
-            </ion-button>
-          </ion-item>
-        </div>
+      <ion-item lines="full" *ngIf="component.list_visit.list.data.length === 0">
+        <h6 style="width: 100%; text-align: center;">
+          No historical visit found
+          <br /><br />Click on "ADD VISIT" button to add new visit
+        </h6>
+      </ion-item>
 
-        <ion-item lines="full" *ngIf="component.list_visit.list.data.length === 0">
-          <h6 style="width: 100%; text-align: center;">
-            No historical visit found
-            <br /><br />Click on "ADD VISIT" button to add new visit
-          </h6>
+      <ion-list *ngIf="component.list_visit.list.data.length > 0">
+        <ion-item lines="full" *ngFor="let visit of component.list_visit.list.data">
+          <ion-label>
+            <h2>
+              <ion-icon name="people-outline" color="danger"></ion-icon>&nbsp;{{(visit.Whom)}}
+            </h2>
+            <h3 style="padding-left: 20px;">{{(visit.Contact)}}</h3>
+            <p style="padding-left: 20px; white-space: break-spaces;">{{(visit.Purpose)}}</p>
+            <p style="padding-left: 20px; white-space: break-spaces;">{{(visit.Place)}}</p>
+          </ion-label>
         </ion-item>
-
-        <ion-list *ngIf="component.list_visit.list.data.length > 0">
-          <ion-item lines="full" *ngFor="let visit of component.list_visit.list.data">
-            <ion-label>
-              <h2>
-                <ion-icon name="people-outline" color="danger"></ion-icon>&nbsp;{{(visit.Whom)}}
-              </h2>
-              <h3 style="padding-left: 20px;">{{(visit.Contact)}}</h3>
-              <p style="padding-left: 20px; white-space: break-spaces;">{{(visit.Purpose)}}</p>
-              <p style="padding-left: 20px; white-space: break-spaces;">{{(visit.Place)}}</p>
-            </ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-card>
-    </div>
+      </ion-list>
+    </ion-card>
   </ion-grid>
 </ion-content>

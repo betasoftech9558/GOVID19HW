@@ -15,19 +15,22 @@ export class ApproutingguardLoginYesService implements CanActivate {
         private router: Router,
 
         private loginService: LoginService,
-    ) { const myThis = this; myThis.service = {};
+    ) {
+        const myThis = this; myThis.service = {};
 
         myThis.init();
     }
 
-    init() { const myThis = this;
+    init() {
+        const myThis = this;
         myThis.service.loginService = myThis.loginService.init();
     }
 
     canActivate(
         router: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
-    ) { const myThis = this;
+    ) {
+        const myThis = this;
         if (myThis.service.loginService.isUserLogin()) {
             return true;
         } else {
@@ -51,18 +54,21 @@ export class ApproutingguardLoginNoService implements CanActivate {
         private router: Router,
 
         private loginService: LoginService,
-    ) { const myThis = this; myThis.service = {};
+    ) {
+        const myThis = this; myThis.service = {};
 
         myThis.init();
     }
 
-    init() { const myThis = this;
+    init() {
+        const myThis = this;
         myThis.service.loginService = myThis.loginService.init();
     }
 
-    canActivate() { const myThis = this;
+    canActivate() {
+        const myThis = this;
         if (myThis.service.loginService.isUserLogin()) {
-            myThis.router.navigate(['tabs/visit']);
+            myThis.router.navigate(['tabs/addvisit']);
             return false;
         } else {
             return true;

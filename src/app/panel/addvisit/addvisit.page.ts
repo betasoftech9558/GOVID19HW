@@ -34,8 +34,6 @@ export class AddVisitPage implements OnInit {
         myThis.component.form_visit_add = {};
         myThis.component.form_visit_add.is_processing = false;
         myThis.component.form_visit_add.server_response = {};
-        myThis.component.form_visit_add.is_visible = false;
-
         myThis.component.form_visit_add.model = {};
         myThis.component.form_visit_add.model.Whom = '';
         myThis.component.form_visit_add.model.Contact = '';
@@ -87,12 +85,5 @@ export class AddVisitPage implements OnInit {
                 return;
             });
         };
-
-        myThis.component.list_visit = {};
-        myThis.component.form_visit_list.server_response = {};
-
-        const today = new Date();
-        myThis.component.form_visit_list.model = {};
-        myThis.component.form_visit_list.model.visitDate = (today.getFullYear().toString()).concat('-').concat((today.getMonth() + 1).toString()).concat('-').concat(today.getDate().toString());
     }
 }
