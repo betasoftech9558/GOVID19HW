@@ -1,0 +1,12 @@
+{
+  "appId": "com.govid19",
+  "appName": "GOVID19",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "linuxAndroidStudioPath": "/snap/bin/android-studio",
+  "cordova": {},
+  "android": {
+    "allowMixedContent": true
+  }
+}

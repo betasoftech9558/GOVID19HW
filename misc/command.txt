@@ -1,0 +1,45 @@
+command.txt
+
+to create ionic application
+ionic start
+
+
+to run application in browser
+ionic serve
+
+
+to create build of ionic application for www folder
+ng build
+ionic build
+
+to create android application project
+ionic capacitor add android
+
+to copy android application project
+ionic capacitor copy android
+
+to execute the application in android-studio
+ionic capacitor run android
+
+to find the android-studio installed
+whereis android-studio
+ionic capacitor run android
+
+
+
+
+to create ionic service
+ionic generate service panel/login/login
+ionic generate service panel/backbutton/backbutton
+
+
+to create ionic page
+ionic generate page home
+
+
+
+
+
+git remote set-url origin git@github.com:hardik68985725/govid19ionicapplication.git
+
+

@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true">
+    <ion-slides pager="true">
+        <ion-slide>
+            <div class="swiper-slide">
+                <img src="./assets/logo.png" />
+                <h2>Welcome</h2>
+                <p>WHO categorizes India as having local transmission of Covid-19, There are very high chances of
+                    spreading Covid-19
+                    locally in India in 3rd Phase.</p>
+                <p>More then 90% Covid-19 infected cases are due to local transmission world-wide.</p>
+                <p><b>WHO urges countries to track and trace every Covid-19 case.</b></p>
+            </div>
+        </ion-slide>
+
+        <ion-slide>
+            <div class="swiper-slide">
+                <img src="./assets/logo.png" />
+                <h2>I Pledge,</h2>
+                <p><b>Support to india's fight against corona virus pandemic by providing true details which is best of
+                        my
+                        knowledge.</b></p>
+                <p>By clicking on continue button below, You are agree that you have read and agree to </p>
+                <p><a href="http://govid19.in/privacypolicy.html"><strong>Privacy & Policy</strong></a></p>
+                <br />
+                <ion-button fill="clear" color="danger" (click)="goToLogin()">Continue To Application <ion-icon
+                        slot="end" name="arrow-forward">
+                    </ion-icon>
+                </ion-button>
+            </div>
+        </ion-slide>
+    </ion-slides>
+    <ion-row style="position: absolute; top: unset; right: 0px; bottom: 20px; left: 0px;">
+        <ion-label style="margin: auto;">&copy; govid19.in</ion-label>
+    </ion-row>
+</ion-content>
