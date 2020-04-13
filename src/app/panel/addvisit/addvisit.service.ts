@@ -5,10 +5,11 @@ import { LoginService } from '../login/login.service';
 
 import { configApp } from '../configs/configApp';
 
+
 @Injectable({
     providedIn: 'root'
 })
-export class UserprofileService {
+export class AddVisitService {
     public service: any = {};
 
     constructor(
@@ -21,12 +22,12 @@ export class UserprofileService {
         myThis.service = {};
         myThis.service.login = myThis.loginServiceP.init();
 
-        myThis.service.userprofile_get = (cb) => {
+        myThis.service.visit_list_get = (data_p, cb) => {
             const userdata = myThis.service.login.getUserSignedinData();
             if (!(userdata && userdata.access_token)) {
                 myThis.service.login.userSignout(true);
             } else {
-                myThis.httpP.post((configApp.SERVER_API_URL).concat('/api/User/GetStaffProfile'), {}, {
+                myThis.httpP.post((configApp.SERVER_API_URL).concat('/api/Visits/GetByUserForDate'), data_p, {
                     headers: new HttpHeaders({
                         'Authorization': userdata.access_token,
                     })
@@ -40,12 +41,12 @@ export class UserprofileService {
             }
         };
 
-        myThis.service.userprofile_update = (data_p, cb) => {
+        myThis.service.visit_add = (data_p, cb) => {
             const userdata = myThis.service.login.getUserSignedinData();
             if (!(userdata && userdata.access_token)) {
                 myThis.service.login.userSignout(true);
             } else {
-                myThis.httpP.post((configApp.SERVER_API_URL).concat('/api/User/UpdateStaffProfile'), data_p, {
+                myThis.httpP.post((configApp.SERVER_API_URL).concat('/api/Visits/NewVisit'), data_p, {
                     headers: new HttpHeaders({
                         'Authorization': userdata.access_token,
                     })

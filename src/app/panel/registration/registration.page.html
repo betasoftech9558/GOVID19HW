@@ -107,8 +107,8 @@
           </ion-card-content>
           <ion-item>
             <ion-label position="stacked">Full Name :</ion-label>
-            <ion-input placeholder="Full Name" type="text" name="UserName"
-              [(ngModel)]="component.form_registration.model.UserName" #UserName="ngModel" clearInput></ion-input>
+            <ion-input placeholder="Full Name" type="text" name="Name"
+              [(ngModel)]="component.form_registration.model.Name" #Name="ngModel" clearInput></ion-input>
           </ion-item>
 
           <ion-item>
@@ -126,14 +126,9 @@
 
           <ion-item>
             <ion-label position="stacked">Birth Date :</ion-label>
-            <ion-datetime
-              placeholder="Birth Date"
-              name="DateofBirth"
-              [(ngModel)]="component.form_registration.model.DateofBirth"
-              #DateofBirth="ngModel"
-              pickerFormat="DD-MM-YYYY"
-              displayFormat="DD-MM-YYYY"
-              min="1900" max="2020">
+            <ion-datetime placeholder="Birth Date" name="DateofBirth"
+              [(ngModel)]="component.form_registration.model.DateofBirth" #DateofBirth="ngModel"
+              pickerFormat="DD-MM-YYYY" displayFormat="DD-MM-YYYY" min="1900" max="2020">
             </ion-datetime>
           </ion-item>
 
@@ -150,86 +145,6 @@
           </ion-item>
 
           <ion-row>
-            <!-- <ion-col>
-              <ion-button type="button" expand="full" size="default" color="primary"
-                [disabled]="component.form_registration.is_processing"
-                (click)="component.form_registration.on_click_previous();">
-                Previous</ion-button>
-            </ion-col> -->
-            <ion-col>
-              <ion-button type="button" expand="full" size="default" color="danger"
-                [disabled]="component.form_registration.is_processing"
-                (click)="component.form_registration.on_click_next();">
-                Next
-              </ion-button>
-            </ion-col>
-          </ion-row>
-        </ion-card>
-      </div>
-
-      <div id="form_registration_step_number_4" *ngIf="component.form_registration.step_number === 4">
-        <ion-card>
-          <ion-item lines="full">
-            <ion-icon name="train-outline" color="danger"></ion-icon>
-            &nbsp;
-            <ion-text color="danger"><strong>FOREIGN TRAVEL</strong></ion-text>
-          </ion-item>
-          <ion-card-content>
-            <ion-text color="medium" style="font-size: 10px !important;">
-              if you have any foreign travels history in last 30 days then please provide detail below.
-            </ion-text>
-          </ion-card-content>
-          <ion-item>
-            <ion-label position="stacked">Country Name :</ion-label>
-            <ion-input type="text" placeholder="Country Name" name="foreignVisit"
-              [(ngModel)]="component.form_registration.model.foreignVisit" #foreignVisit="ngModel" clearInput>
-            </ion-input>
-          </ion-item>
-
-          <ion-item>
-            <ion-label position="stacked">Return Days :</ion-label>
-            <ion-input type="number" placeholder="Return Days" name="returnDays"
-              [(ngModel)]="component.form_registration.model.returnDays" #returnDays="ngModel" clearInput>
-            </ion-input>
-          </ion-item>
-        </ion-card>
-
-        <ion-card>
-          <ion-item lines="full">
-            <ion-icon name="medical-outline" color="danger"></ion-icon>
-            &nbsp;
-            <ion-text color="danger"><strong>COVID19 SYMPTOMS</strong></ion-text>
-          </ion-item>
-          <ion-card-content>
-
-            <ion-text color="medium" style="font-size: 10px !important;">
-              if you are facing any of COVID19 symptoms from below then please check it.
-            </ion-text>
-          </ion-card-content>
-          <ion-item lines="full">
-            <ion-label>Cold/Cough</ion-label>
-            <ion-checkbox name="haveCough" [(ngModel)]="component.form_registration.model.haveCough"
-              #haveCough="ngModel" color="primary" slot="end"></ion-checkbox>
-          </ion-item>
-
-          <ion-item lines="full">
-            <ion-label>Fever</ion-label>
-            <ion-checkbox name="haveFeaver" [(ngModel)]="component.form_registration.model.haveFeaver"
-              #haveFeaver="ngModel" color="primary" slot="end"></ion-checkbox>
-          </ion-item>
-          <ion-item lines="full">
-            <ion-label>Shortness of Breath</ion-label>
-            <ion-checkbox name="haveBreathingProblem"
-              [(ngModel)]="component.form_registration.model.haveBreathingProblem" #haveBreathingProblem="ngModel"
-              color="primary" slot="end"></ion-checkbox>
-          </ion-item>
-          <ion-row>
-            <ion-col>
-              <ion-button type="button" expand="full" size="default" color="primary"
-                [disabled]="component.form_registration.is_processing"
-                (click)="component.form_registration.on_click_previous();">
-                Previous</ion-button>
-            </ion-col>
             <ion-col>
               <ion-button type="submit" expand="full" size="default" color="danger"
                 [disabled]="component.form_registration.is_processing">

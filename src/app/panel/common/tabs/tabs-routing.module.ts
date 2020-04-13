@@ -8,6 +8,15 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
+        path: 'addvisit',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../../../panel/addvisit/addvisit.module').then(m => m.AddVisitPageModule)
+          }
+        ]
+      },
+      {
         path: 'visit',
         children: [
           {
@@ -27,14 +36,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/visit',
+        redirectTo: '/tabs/addvisit',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/visit',
+    redirectTo: '/tabs/addvisit',
     pathMatch: 'full'
   }
 ];
@@ -43,4 +52,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }

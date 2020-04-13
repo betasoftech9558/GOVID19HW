@@ -46,15 +46,6 @@ export class UserprofilePage implements OnInit {
         myThis.component.form_userprofile.model.DateofBirth = '';
         myThis.component.form_userprofile.model.Address = '';
         myThis.component.form_userprofile.model.Pincode = '';
-        myThis.component.form_userprofile.model.foreignVisit = '';
-        myThis.component.form_userprofile.model.returnDays = '';
-        myThis.component.form_userprofile.model.haveCough = false;
-        myThis.component.form_userprofile.model.haveFeaver = false;
-        myThis.component.form_userprofile.model.haveBreathingProblem = false;
-        myThis.component.form_userprofile.model.disabled_haveCough = myThis.component.form_userprofile.model.haveCough;
-        myThis.component.form_userprofile.model.disabled_haveFeaver = myThis.component.form_userprofile.model.haveFeaver;
-        myThis.component.form_userprofile.model.disabled_haveBreathingProblem = myThis.component.form_userprofile.model.haveBreathingProblem;
-
 
         myThis.component.form_userprofile.userprofile_get = () => {
             myThis.service.userprofile_get((error_p, result_p) => {
@@ -65,8 +56,6 @@ export class UserprofilePage implements OnInit {
                             message: error_p.error_description,
                             color: 'danger',
                         });
-                        // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                        // setTimeout(() => { window.location.reload(); }, 2000);
                         return;
                     }
                 }
@@ -78,31 +67,18 @@ export class UserprofilePage implements OnInit {
                             message: result_p.ResponseMessage,
                             color: 'danger',
                         });
-                        // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                        // setTimeout(() => { window.location.reload(); }, 2000);
                         return;
                     }
 
                     if (result_p.ResponseStatus === true && result_p.ResponseObject) {
                         myThis.component.form_userprofile.model.UserID = (result_p.ResponseObject.UserID) ? result_p.ResponseObject.UserID : '';
-                        myThis.component.form_userprofile.model.UserName = (result_p.ResponseObject.Name) ? result_p.ResponseObject.Name : '';
+                        myThis.component.form_userprofile.model.Name = (result_p.ResponseObject.Name) ? result_p.ResponseObject.Name : '';
                         myThis.component.form_userprofile.model.DateofBirth = (result_p.ResponseObject.DateofBirth) ? result_p.ResponseObject.DateofBirth : '';
                         myThis.component.form_userprofile.model.Address = (result_p.ResponseObject.Address) ? result_p.ResponseObject.Address : '';
                         myThis.component.form_userprofile.model.Pincode = (result_p.ResponseObject.Pincode) ? result_p.ResponseObject.Pincode : '';
-                        myThis.component.form_userprofile.model.foreignVisit = (result_p.ResponseObject.foreignVisit) ? result_p.ResponseObject.foreignVisit : '';
-                        myThis.component.form_userprofile.model.returnDays = (result_p.ResponseObject.returnDays) ? result_p.ResponseObject.returnDays : '';
-                        myThis.component.form_userprofile.model.haveCough = (result_p.ResponseObject.haveCough) ? result_p.ResponseObject.haveCough : false;
-                        myThis.component.form_userprofile.model.haveFeaver = (result_p.ResponseObject.haveFeaver) ? result_p.ResponseObject.haveFeaver : false;
-                        myThis.component.form_userprofile.model.haveBreathingProblem = (result_p.ResponseObject.haveBreathingProblem) ? result_p.ResponseObject.haveBreathingProblem : false;
-
-                        myThis.component.form_userprofile.model.disabled_haveCough = myThis.component.form_userprofile.model.haveCough;
-                        myThis.component.form_userprofile.model.disabled_haveFeaver = myThis.component.form_userprofile.model.haveFeaver;
-                        myThis.component.form_userprofile.model.disabled_haveBreathingProblem = myThis.component.form_userprofile.model.haveBreathingProblem;
                         return;
                     }
                 }
-                // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                // setTimeout(() => { window.location.reload(); }, 2000);
                 return;
             });
         };
@@ -120,8 +96,6 @@ export class UserprofilePage implements OnInit {
                             message: error_p.error_description,
                             color: 'danger',
                         });
-                        // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                        // setTimeout(() => { window.location.reload(); }, 2000);
                         return;
                     }
                 }
@@ -133,8 +107,6 @@ export class UserprofilePage implements OnInit {
                             message: result_p.ResponseMessage,
                             color: 'danger',
                         });
-                        // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                        // setTimeout(() => { window.location.reload(); }, 2000);
                         return;
                     } else if (result_p.ResponseStatus === true) {
                         myThis.component.form_userprofile.userprofile_get();
@@ -143,13 +115,9 @@ export class UserprofilePage implements OnInit {
                             message: result_p.ResponseMessage,
                             color: 'success',
                         });
-                        // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                        // setTimeout(() => { window.location.reload(); }, 2000);
                         return;
                     }
                 }
-                // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                // setTimeout(() => { window.location.reload(); }, 2000);
                 return;
             });
         };

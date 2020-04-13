@@ -51,51 +51,36 @@ export class LoginPage implements OnInit {
                 myThis.component.form_login.server_response = {};
 
                 if (error_p) {
-                    // alert('on_submit 3');
                     if (error_p.error_description) {
-                        // alert('on_submit 4');
                         this.toastServiceP.toast_show({
                             duration: 2000,
                             message: error_p.error_description,
                             color: 'danger',
                         });
-                        // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                        //setTimeout(() => { window.location.reload(); }, 2000);
                         return;
                     }
                 }
-
-                // alert('on_submit 5');
                 if (result_p) {
-                    // alert('on_submit 6');
                     if (((result_p.ResponseStatus === false) && result_p.ResponseMessage)) {
                         this.toastServiceP.toast_show({
                             duration: 2000,
                             message: result_p.ResponseMessage,
                             color: 'danger',
                         });
-                        // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                        //setTimeout(() => { window.location.reload(); }, 2000);
                         return;
                     }
 
                     if (result_p.access_token) {
-                        // alert('on_submit 7');
                         myThis.service.setUserSignedinData({ access_token: ('bearer ').concat(result_p.access_token) });
-                        // alert('on_submit 8');
                         this.toastServiceP.toast_show({
                             message: 'Login Successful.',
                             duration: 2000,
                             color: 'success',
                         });
-
-                        setTimeout(() => { myThis.routerP.navigate(['tabs/visit']); }, 1);
-                        // setTimeout(() => { window.location.reload(); }, 1);
+                        setTimeout(() => { myThis.routerP.navigate(['tabs/addvisit']); }, 1);
                         return;
                     }
                 }
-                // setTimeout(() => { myThis.routerP.navigate(['tabs/visit']); }, 2000);
-                //setTimeout(() => { window.location.reload(); }, 2000);
                 return;
             });
         };

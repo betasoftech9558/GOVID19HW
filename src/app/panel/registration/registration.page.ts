@@ -42,15 +42,10 @@ export class RegistrationPage implements OnInit {
         myThis.component.form_registration.model.otp = '';
         myThis.component.form_registration.model.Password = '';
         myThis.component.form_registration.model.Password2 = '';
-        myThis.component.form_registration.model.UserName = '';
+        myThis.component.form_registration.model.Name = '';
         myThis.component.form_registration.model.DateofBirth = '';
         myThis.component.form_registration.model.Address = '';
         myThis.component.form_registration.model.Pincode = '';
-        myThis.component.form_registration.model.foreignVisit = '';
-        myThis.component.form_registration.model.returnDays = '';
-        myThis.component.form_registration.model.haveCough = false;
-        myThis.component.form_registration.model.haveFeaver = false;
-        myThis.component.form_registration.model.haveBreathingProblem = false;
 
         myThis.component.form_registration.otp_get = () => {
             myThis.component.form_registration.is_processing = true;
@@ -66,8 +61,6 @@ export class RegistrationPage implements OnInit {
                             message: error_p.error_description,
                             color: 'danger',
                         });
-                        // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                        // setTimeout(() => { window.location.reload(); }, 2000);
                         return;
                     }
                 }
@@ -79,8 +72,6 @@ export class RegistrationPage implements OnInit {
                             message: result_p.ResponseMessage,
                             color: 'danger',
                         });
-                        // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                        // setTimeout(() => { window.location.reload(); }, 2000);
                         return;
                     }
 
@@ -96,8 +87,6 @@ export class RegistrationPage implements OnInit {
                         return;
                     }
                 }
-                // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                // setTimeout(() => { window.location.reload(); }, 2000);
                 return;
             });
         };
@@ -117,8 +106,6 @@ export class RegistrationPage implements OnInit {
                             message: error_p.error_description,
                             color: 'danger',
                         });
-                        // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                        //setTimeout(() => { window.location.reload(); }, 2000);
                         return;
                     }
                 }
@@ -130,8 +117,6 @@ export class RegistrationPage implements OnInit {
                             message: result_p.ResponseMessage,
                             color: 'danger',
                         });
-                        // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                        // setTimeout(() => { window.location.reload(); }, 2000);
                         return;
                     }
 
@@ -147,8 +132,6 @@ export class RegistrationPage implements OnInit {
                         return;
                     }
                 }
-                // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                // setTimeout(() => { window.location.reload(); }, 2000);
                 return;
             });
         };
@@ -183,8 +166,6 @@ export class RegistrationPage implements OnInit {
                             message: error_p.error_description,
                             color: 'danger',
                         });
-                        // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                        // setTimeout(() => { window.location.reload(); }, 2000);
                         return;
                     }
                 }
@@ -196,8 +177,6 @@ export class RegistrationPage implements OnInit {
                             message: result_p.ResponseMessage,
                             color: 'danger',
                         });
-                        // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                        // setTimeout(() => { window.location.reload(); }, 2000);
                         return;
                     }
 
@@ -207,14 +186,10 @@ export class RegistrationPage implements OnInit {
                             message: 'Registration Successful.',
                             color: 'success',
                         });
-                        // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                        // setTimeout(() => { window.location.reload(); }, 2000);
                         setTimeout(() => { myThis.routerP.navigate(['/login']); }, 1);
                         return;
                     }
                 }
-                // setTimeout(() => { myThis.routerP.navigate(['']); }, 2000);
-                // setTimeout(() => { window.location.reload(); }, 2000);
                 return;
             });
         };

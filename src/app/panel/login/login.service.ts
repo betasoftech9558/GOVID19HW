@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
-// import { AlertService } from '../common/alert/alert.service';
-
 import { configApp } from '../configs/configApp';
 
 @Injectable({
@@ -71,7 +68,6 @@ export class LoginService {
         myThis.service.isUserLogin = () => {
             // alert('isUserLogin');
             const userData = myThis.service.getUserSignedinData();
-            console.log('userData -----', userData);
 
             if (userData && userData.access_token) {
                 return true;

@@ -2,22 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { ToastService } from '../common/toast/toast.service';
-
-import { VisitService } from '../visit/visit.service';
+import { AddVisitService } from './addvisit.service';
 
 @Component({
-    selector: 'app-visit',
-    templateUrl: './visit.page.html',
-    styleUrls: ['./visit.page.scss'],
+    selector: 'app-addvisit',
+    templateUrl: './addvisit.page.html',
+    styleUrls: ['./addvisit.page.scss'],
 })
-export class VisitPage implements OnInit {
+export class AddVisitPage implements OnInit {
     public component: any;
     public service: any;
 
     constructor(
         private routerP: Router,
         private toastServiceP: ToastService,
-        private visitServiceP: VisitService,
+        private visitServiceP: AddVisitService,
     ) { const myThis = this; }
 
     ngOnInit() { const myThis = this; }
@@ -35,24 +34,22 @@ export class VisitPage implements OnInit {
         myThis.component.form_visit_add = {};
         myThis.component.form_visit_add.is_processing = false;
         myThis.component.form_visit_add.server_response = {};
-        myThis.component.form_visit_add.is_visible = false;
+        myThis.component.form_visit_add.model = {};
+        myThis.component.form_visit_add.model.Whom = '';
+        myThis.component.form_visit_add.model.Contact = '';
+        myThis.component.form_visit_add.model.Purpose = '';
+        myThis.component.form_visit_add.model.Place = '';
+        myThis.component.form_visit_add.model.VisitDatetime = '';
 
-        myThis.component.list_visit = {};
-        myThis.component.list_visit.list = {};
-        myThis.component.list_visit.list.data = [];
+        myThis.component.form_visit_add.on_click_change_view = () => {
+            myThis.component.form_visit_add.is_visible = !myThis.component.form_visit_add.is_visible;
+        };
 
-        myThis.component.form_visit_list = {};
-        myThis.component.form_visit_list.is_processing = false;
-        myThis.component.form_visit_list.server_response = {};
+        myThis.component.form_visit_add.on_submit = (form_visit_add) => {
+            myThis.component.form_visit_add.is_processing = true;
 
-        const today = new Date();
-        myThis.component.form_visit_list.model = {};
-        myThis.component.form_visit_list.model.visitDate = (today.getFullYear().toString()).concat('-').concat((today.getMonth() + 1).toString()).concat('-').concat(today.getDate().toString());
-
-        myThis.component.list_visit.get = () => {
-            myThis.component.form_visit_list.is_processing = true;
-            myThis.service.visit_list_get(myThis.component.form_visit_list.model, (error_p, result_p) => {
-
+            myThis.service.visit_add(myThis.component.form_visit_add.model, (error_p, result_p) => {
+                myThis.component.form_visit_add.is_processing = false;
                 if (error_p) {
                     if (error_p.error_description) {
                         this.toastServiceP.toast_show({
@@ -75,19 +72,18 @@ export class VisitPage implements OnInit {
                     }
 
                     if (result_p.ResponseStatus === true && result_p.ResponseObject) {
-                        myThis.component.list_visit.list.data = result_p.ResponseObject;
-                        myThis.component.form_visit_list.is_processing = false;
+                        this.toastServiceP.toast_show({
+                            duration: 2000,
+                            message: 'Visit added successful',
+                            color: 'success',
+                        });
+                        myThis.component.list_visit.get();
+                        myThis.component.form_visit_add.is_visible = !myThis.component.form_visit_add.is_visible;
                         return;
                     }
                 }
                 return;
             });
-        };
-
-        myThis.component.list_visit.get();
-
-        myThis.component.form_visit_list.on_change_visitdate = () => {
-            myThis.component.list_visit.get();
         };
     }
 }
