@@ -46,7 +46,7 @@ export class AddVisitService {
             if (!(userdata && userdata.access_token)) {
                 myThis.service.login.userSignout(true);
             } else {
-                myThis.httpP.post((configApp.SERVER_API_URL).concat('/api/Visits/NewVisit'), data_p, {
+                myThis.httpP.post((configApp.SERVER_API_URL).concat('/api/Survey/SaveSurvey'), data_p, {
                     headers: new HttpHeaders({
                         'Authorization': userdata.access_token,
                     })
