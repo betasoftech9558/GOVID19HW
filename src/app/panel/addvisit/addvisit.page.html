@@ -21,34 +21,35 @@
 
         <ion-item lines="full">
           <ion-label position="stacked">Full Name:</ion-label>
-          <ion-input type="text" clearInput placeholder="Full Name" name="Name" [(ngModel)]="component.form_visit_add.model.Name" #Name="ngModel"></ion-input>
+          <ion-input type="text" clearInput placeholder="Full Name" name="Name"
+            [(ngModel)]="component.form_visit_add.model.Name" #Name="ngModel"></ion-input>
         </ion-item>
 
         <ion-item lines="full">
           <ion-label position="stacked">Contact:</ion-label>
-          <ion-input type="number" clearInput placeholder="Contact" name="ContactNumber" [(ngModel)]="component.form_visit_add.model.ContactNumber" #ContactNumber="ngModel"></ion-input>
+          <ion-input type="number" clearInput placeholder="Contact" name="ContactNumber"
+            [(ngModel)]="component.form_visit_add.model.ContactNumber" #ContactNumber="ngModel"></ion-input>
         </ion-item>
 
         <ion-item lines="full">
           <ion-label position="stacked">Age:</ion-label>
-          <ion-input type="number" clearInput name="Age" placeholder="Age" [(ngModel)]="component.form_visit_add.model.Age" #Age="ngModel"></ion-input>
+          <ion-input type="number" clearInput name="Age" placeholder="Age"
+            [(ngModel)]="component.form_visit_add.model.Age" #Age="ngModel"></ion-input>
         </ion-item>
 
         <ion-item lines="full">
-          <ion-label position="stacked">Gender:</ion-label>
-        </ion-item>
-        <ion-item lines="full">
+          <ion-label position="stacked" style="margin-bottom: 1px !important;">Gender:</ion-label>
           <ion-radio-group name="Gender" [(ngModel)]="component.form_visit_add.model.Gender" #Gender="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>Male</ion-label>
                   <ion-radio slot="start" color="danger" value="1"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>Female</ion-label>
                   <ion-radio slot="start" color="danger" value="2"></ion-radio>
                 </ion-item>
@@ -59,11 +60,13 @@
 
         <ion-item lines="full">
           <ion-label position="stacked">Address:</ion-label>
-          <ion-textarea name="Addresss" placeholder="Address" [(ngModel)]="component.form_visit_add.model.Addresss" #Addresss="ngModel"></ion-textarea>
+          <ion-textarea name="Addresss" placeholder="Address" [(ngModel)]="component.form_visit_add.model.Addresss"
+            #Addresss="ngModel"></ion-textarea>
         </ion-item>
-        <ion-item>
+        <ion-item lines="none">
           <ion-label position="stacked">Pin code:</ion-label>
-          <ion-input type="number" clearInput placeholder="Pin code" name="Pincode" [(ngModel)]="component.form_visit_add.model.Pincode" #Pincode="ngModel"></ion-input>
+          <ion-input type="number" clearInput placeholder="Pin code" name="Pincode"
+            [(ngModel)]="component.form_visit_add.model.Pincode" #Pincode="ngModel"></ion-input>
         </ion-item>
       </ion-card>
 
@@ -73,21 +76,22 @@
           <ion-text color="danger"><strong>POST ILLNESS DETAIL</strong></ion-text>
         </ion-item>
 
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-label>Diabetes:</ion-label>
         </ion-item>
-        <ion-item lines="full">
-          <ion-radio-group name="haveDiabetes" [(ngModel)]="component.form_visit_add.model.haveDiabetes" #haveDiabetes="ngModel">
+        <ion-item lines="none">
+          <ion-radio-group name="haveDiabetes" [(ngModel)]="component.form_visit_add.model.haveDiabetes"
+            #haveDiabetes="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -96,24 +100,25 @@
           </ion-radio-group>
         </ion-item>
         <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Diabetes" name="daysDiabetes" [(ngModel)]="component.form_visit_add.model.daysDiabetes" #daysDiabetes="ngModel"></ion-input>
+          <ion-input type="number" clearInput placeholder="Days of Diabetes" name="daysDiabetes"
+            [(ngModel)]="component.form_visit_add.model.daysDiabetes" #daysDiabetes="ngModel"></ion-input>
         </ion-item>
 
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-label>B.P.:</ion-label>
         </ion-item>
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-radio-group name="haveBP" [(ngModel)]="component.form_visit_add.model.haveBP" #haveBP="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -122,24 +127,26 @@
           </ion-radio-group>
         </ion-item>
         <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of B.P." name="daysBP" [(ngModel)]="component.form_visit_add.model.daysBP" #daysBP="ngModel"></ion-input>
+          <ion-input type="number" clearInput placeholder="Days of B.P." name="daysBP"
+            [(ngModel)]="component.form_visit_add.model.daysBP" #daysBP="ngModel"></ion-input>
         </ion-item>
 
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-label>Heart Problem:</ion-label>
         </ion-item>
-        <ion-item lines="full">
-          <ion-radio-group name="haveHeartProblem" [(ngModel)]="component.form_visit_add.model.haveHeartProblem" #haveHeartProblem="ngModel">
+        <ion-item lines="none">
+          <ion-radio-group name="haveHeartProblem" [(ngModel)]="component.form_visit_add.model.haveHeartProblem"
+            #haveHeartProblem="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -148,24 +155,26 @@
           </ion-radio-group>
         </ion-item>
         <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Heart Problem" name="daysHeartProblem" [(ngModel)]="component.form_visit_add.model.daysHeartProblem" #daysHeartProblem="ngModel"></ion-input>
+          <ion-input type="number" clearInput placeholder="Days of Heart Problem" name="daysHeartProblem"
+            [(ngModel)]="component.form_visit_add.model.daysHeartProblem" #daysHeartProblem="ngModel"></ion-input>
         </ion-item>
 
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-label>Lungs Problem:</ion-label>
         </ion-item>
-        <ion-item lines="full">
-          <ion-radio-group name="haveLungsProblem" [(ngModel)]="component.form_visit_add.model.haveLungsProblem" #haveLungsProblem="ngModel">
+        <ion-item lines="none">
+          <ion-radio-group name="haveLungsProblem" [(ngModel)]="component.form_visit_add.model.haveLungsProblem"
+            #haveLungsProblem="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -174,24 +183,26 @@
           </ion-radio-group>
         </ion-item>
         <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Lungs Problem" name="daysLungsProblem" [(ngModel)]="component.form_visit_add.model.daysLungsProblem" #daysLungsProblem="ngModel"></ion-input>
+          <ion-input type="number" clearInput placeholder="Days of Lungs Problem" name="daysLungsProblem"
+            [(ngModel)]="component.form_visit_add.model.daysLungsProblem" #daysLungsProblem="ngModel"></ion-input>
         </ion-item>
 
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-label>Kidney Related Problem:</ion-label>
         </ion-item>
-        <ion-item lines="full">
-          <ion-radio-group name="haveKidenyProblem" [(ngModel)]="component.form_visit_add.model.haveKidenyProblem" #haveKidenyProblem="ngModel">
+        <ion-item lines="none">
+          <ion-radio-group name="haveKidenyProblem" [(ngModel)]="component.form_visit_add.model.haveKidenyProblem"
+            #haveKidenyProblem="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -200,9 +211,10 @@
           </ion-radio-group>
         </ion-item>
         <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Kidney Related Problem" name="daysKidenyProblem" [(ngModel)]="component.form_visit_add.model.daysKidenyProblem" #daysKidenyProblem="ngModel"></ion-input>
+          <ion-input type="number" clearInput placeholder="Days of Kidney Related Problem" name="daysKidenyProblem"
+            [(ngModel)]="component.form_visit_add.model.daysKidenyProblem" #daysKidenyProblem="ngModel"></ion-input>
         </ion-item>
-        <ion-item></ion-item>
+        <ion-item lines="none"></ion-item>
       </ion-card>
 
       <ion-card>
@@ -211,21 +223,21 @@
           <ion-text color="danger"><strong>SYMPTOMS ON TODAY</strong></ion-text>
         </ion-item>
 
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-label>Medium To High Cough:</ion-label>
         </ion-item>
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-radio-group name="haveCough" [(ngModel)]="component.form_visit_add.model.haveCough" #haveCough="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -234,24 +246,26 @@
           </ion-radio-group>
         </ion-item>
         <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Medium To High Cough" name="daysCough" [(ngModel)]="component.form_visit_add.model.daysCough" #daysCough="ngModel"></ion-input>
+          <ion-input type="number" clearInput placeholder="Days of Medium To High Cough" name="daysCough"
+            [(ngModel)]="component.form_visit_add.model.daysCough" #daysCough="ngModel"></ion-input>
         </ion-item>
 
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-label>Dry Cough:</ion-label>
         </ion-item>
-        <ion-item lines="full">
-          <ion-radio-group name="haveDryCough" [(ngModel)]="component.form_visit_add.model.haveDryCough" #haveDryCough="ngModel">
+        <ion-item lines="none">
+          <ion-radio-group name="haveDryCough" [(ngModel)]="component.form_visit_add.model.haveDryCough"
+            #haveDryCough="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -260,24 +274,26 @@
           </ion-radio-group>
         </ion-item>
         <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Dry Cough" name="daysDryCough" [(ngModel)]="component.form_visit_add.model.daysDryCough" #daysDryCough="ngModel"></ion-input>
+          <ion-input type="number" clearInput placeholder="Days of Dry Cough" name="daysDryCough"
+            [(ngModel)]="component.form_visit_add.model.daysDryCough" #daysDryCough="ngModel"></ion-input>
         </ion-item>
 
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-label>Sore Throat:</ion-label>
         </ion-item>
-        <ion-item lines="full">
-          <ion-radio-group name="haveSoreThroat" [(ngModel)]="component.form_visit_add.model.haveSoreThroat" #haveSoreThroat="ngModel">
+        <ion-item lines="none">
+          <ion-radio-group name="haveSoreThroat" [(ngModel)]="component.form_visit_add.model.haveSoreThroat"
+            #haveSoreThroat="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -286,24 +302,26 @@
           </ion-radio-group>
         </ion-item>
         <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Sore Throat" name="daysSoreThroat" [(ngModel)]="component.form_visit_add.model.daysSoreThroat" #daysSoreThroat="ngModel"></ion-input>
+          <ion-input type="number" clearInput placeholder="Days of Sore Throat" name="daysSoreThroat"
+            [(ngModel)]="component.form_visit_add.model.daysSoreThroat" #daysSoreThroat="ngModel"></ion-input>
         </ion-item>
 
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-label>Problem In Smell:</ion-label>
         </ion-item>
-        <ion-item lines="full">
-          <ion-radio-group name="haveSmellProblem" [(ngModel)]="component.form_visit_add.model.haveSmellProblem" #haveSmellProblem="ngModel">
+        <ion-item lines="none">
+          <ion-radio-group name="haveSmellProblem" [(ngModel)]="component.form_visit_add.model.haveSmellProblem"
+            #haveSmellProblem="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -312,24 +330,26 @@
           </ion-radio-group>
         </ion-item>
         <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Problem In Smell" name="daysSmellProblem" [(ngModel)]="component.form_visit_add.model.daysSmellProblem" #daysSmellProblem="ngModel"></ion-input>
+          <ion-input type="number" clearInput placeholder="Days of Problem In Smell" name="daysSmellProblem"
+            [(ngModel)]="component.form_visit_add.model.daysSmellProblem" #daysSmellProblem="ngModel"></ion-input>
         </ion-item>
 
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-label>Problem In Breathing:</ion-label>
         </ion-item>
-        <ion-item lines="full">
-          <ion-radio-group name="haveBreathProblem" [(ngModel)]="component.form_visit_add.model.haveBreathProblem" #haveBreathProblem="ngModel">
+        <ion-item lines="none">
+          <ion-radio-group name="haveBreathProblem" [(ngModel)]="component.form_visit_add.model.haveBreathProblem"
+            #haveBreathProblem="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -338,24 +358,26 @@
           </ion-radio-group>
         </ion-item>
         <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Problem In Breathing" name="daysBreathProblem" [(ngModel)]="component.form_visit_add.model.daysBreathProblem" #daysBreathProblem="ngModel"></ion-input>
+          <ion-input type="number" clearInput placeholder="Days of Problem In Breathing" name="daysBreathProblem"
+            [(ngModel)]="component.form_visit_add.model.daysBreathProblem" #daysBreathProblem="ngModel"></ion-input>
         </ion-item>
 
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-label>Body Pain:</ion-label>
         </ion-item>
-        <ion-item lines="full">
-          <ion-radio-group name="haveBodyPain" [(ngModel)]="component.form_visit_add.model.haveBodyPain" #haveBodyPain="ngModel">
+        <ion-item lines="none">
+          <ion-radio-group name="haveBodyPain" [(ngModel)]="component.form_visit_add.model.haveBodyPain"
+            #haveBodyPain="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -364,24 +386,26 @@
           </ion-radio-group>
         </ion-item>
         <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Body Pain" name="daysBodyPain" [(ngModel)]="component.form_visit_add.model.daysBodyPain" #daysBodyPain="ngModel"></ion-input>
+          <ion-input type="number" clearInput placeholder="Days of Body Pain" name="daysBodyPain"
+            [(ngModel)]="component.form_visit_add.model.daysBodyPain" #daysBodyPain="ngModel"></ion-input>
         </ion-item>
 
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-label>Chest Pain:</ion-label>
         </ion-item>
-        <ion-item lines="full">
-          <ion-radio-group name="haveChestPain" [(ngModel)]="component.form_visit_add.model.haveChestPain" #haveChestPain="ngModel">
+        <ion-item lines="none">
+          <ion-radio-group name="haveChestPain" [(ngModel)]="component.form_visit_add.model.haveChestPain"
+            #haveChestPain="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -390,24 +414,26 @@
           </ion-radio-group>
         </ion-item>
         <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Chest Pain" name="daysChestPain" [(ngModel)]="component.form_visit_add.model.daysChestPain" #daysChestPain="ngModel"></ion-input>
+          <ion-input type="number" clearInput placeholder="Days of Chest Pain" name="daysChestPain"
+            [(ngModel)]="component.form_visit_add.model.daysChestPain" #daysChestPain="ngModel"></ion-input>
         </ion-item>
 
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-label>Diarrhea:</ion-label>
         </ion-item>
-        <ion-item lines="full">
-          <ion-radio-group name="haveDiarrheoa" [(ngModel)]="component.form_visit_add.model.haveDiarrheoa" #haveDiarrheoa="ngModel">
+        <ion-item lines="none">
+          <ion-radio-group name="haveDiarrheoa" [(ngModel)]="component.form_visit_add.model.haveDiarrheoa"
+            #haveDiarrheoa="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -416,24 +442,25 @@
           </ion-radio-group>
         </ion-item>
         <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Diarrhea" name="daysDiarrheoa" [(ngModel)]="component.form_visit_add.model.daysDiarrheoa" #daysDiarrheoa="ngModel"></ion-input>
+          <ion-input type="number" clearInput placeholder="Days of Diarrhea" name="daysDiarrheoa"
+            [(ngModel)]="component.form_visit_add.model.daysDiarrheoa" #daysDiarrheoa="ngModel"></ion-input>
         </ion-item>
 
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-label>Fever:</ion-label>
         </ion-item>
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-radio-group name="haveFever" [(ngModel)]="component.form_visit_add.model.haveFever" #haveFever="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -442,17 +469,20 @@
           </ion-radio-group>
         </ion-item>
         <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Fever" name="daysFever" [(ngModel)]="component.form_visit_add.model.daysFever" #daysFever="ngModel"></ion-input>
+          <ion-input type="number" clearInput placeholder="Days of Fever" name="daysFever"
+            [(ngModel)]="component.form_visit_add.model.daysFever" #daysFever="ngModel"></ion-input>
         </ion-item>
 
         <ion-item lines="full">
           <ion-label>SOS:</ion-label>
-          <ion-checkbox color="danger" name="IsSOS" [(ngModel)]="component.form_visit_add.model.IsSOS" #IsSOS="ngModel"></ion-checkbox>
+          <ion-checkbox color="danger" name="IsSOS" [(ngModel)]="component.form_visit_add.model.IsSOS" #IsSOS="ngModel">
+          </ion-checkbox>
         </ion-item>
 
         <ion-row>
           <ion-col>
-            <ion-button type="submit" expand="full" size="default" color="danger" [disabled]="component.form_visit_add.is_processing">Submit</ion-button>
+            <ion-button type="submit" expand="full" size="default" color="danger"
+              [disabled]="component.form_visit_add.is_processing">Submit</ion-button>
           </ion-col>
         </ion-row>
       </ion-card>
