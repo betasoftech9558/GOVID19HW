@@ -52,7 +52,7 @@ export class VisitPage implements OnInit {
         myThis.component.list_visit.get = () => {
             myThis.component.form_visit_list.is_processing = true;
             myThis.service.visit_list_get(myThis.component.form_visit_list.model, (error_p, result_p) => {
-
+                myThis.component.form_visit_list.is_processing = false;
                 if (error_p) {
                     if (error_p.error_description) {
                         this.toastServiceP.toast_show({
@@ -76,7 +76,6 @@ export class VisitPage implements OnInit {
 
                     if (result_p.ResponseStatus === true && result_p.ResponseObject) {
                         myThis.component.list_visit.list.data = result_p.ResponseObject;
-                        myThis.component.form_visit_list.is_processing = false;
                         return;
                     }
                 }
