@@ -40,22 +40,24 @@
         </ion-item>
       </div>
 
-      <ion-item lines="full" *ngIf="component.list_visit.list.data.length === 0">
-        <h6 style="width: 100%; text-align: center;">
-          No historical visit found
-          <br /><br />Click on "ADD VISIT" button to add new visit
-        </h6>
-      </ion-item>
-
       <ion-list *ngIf="component.list_visit.list.data.length > 0">
         <ion-item lines="full" *ngFor="let visit of component.list_visit.list.data">
           <ion-label>
             <h2>
-              <ion-icon name="people-outline" color="danger"></ion-icon>&nbsp;{{(visit.Whom)}}
+              <ion-icon name="people-outline" color="danger"></ion-icon>&nbsp;{{(visit.Name)}}
             </h2>
-            <h3 style="padding-left: 20px;">{{(visit.Contact)}}</h3>
-            <p style="padding-left: 20px; white-space: break-spaces;">{{(visit.Purpose)}}</p>
-            <p style="padding-left: 20px; white-space: break-spaces;">{{(visit.Place)}}</p>
+            <h3 style="padding-left: 20px;">{{(visit.ContactNumber)}}</h3>
+            <!-- <p style="padding-left: 20px; white-space: break-spaces;">{{(visit.Addresss)}} - {{visit.Pincode}}</p> -->
+            <p style="padding-left: 20px; white-space:break-spaces;width:100%;">
+              <!-- <div style="width:50% !important;">
+                <strong>Severity Level :</strong>
+                {{visit.SeverityLevel}}
+              </div>
+              <div style="width:50% !important;">
+                <strong>IS SOS :</strong>
+                {{visit.IsSOS}}
+              </div> -->
+            </p>
           </ion-label>
         </ion-item>
       </ion-list>
