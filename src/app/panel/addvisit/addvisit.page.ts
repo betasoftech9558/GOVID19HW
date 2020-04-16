@@ -317,7 +317,7 @@ export class AddVisitPage implements OnInit {
 
                 // myThis.component.form_visit_add.model_error = form_visit_add_validate;
             }
-            return;
+            // return;
             this.geolocationServiceP.get_current_latitude_longitude(( error_p, result_p ) => {
                 if ( error_p ) {
                     console.log('get_current_latitude_longitude - error_p ----- ', error_p);
