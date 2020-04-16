@@ -307,6 +307,52 @@ export class AddVisitPage implements OnInit {
             const form_visit_add_validate = myThis.component.form_visit_add.validate();
             console.log('form_visit_add_validate ----- ', form_visit_add_validate);
             if ( form_visit_add_validate === true ) {
+                this.geolocationServiceP.get_current_latitude_longitude(( error_p, result_p ) => {
+                    if ( error_p ) {
+                        console.log('get_current_latitude_longitude - error_p ----- ', error_p);
+                    }
+                    if ( result_p ) {
+                        myThis.component.form_visit_add.model.latitude = result_p.latitude;
+                        myThis.component.form_visit_add.model.longitude = result_p.longitude;
+
+                        myThis.component.form_visit_add.is_processing = true;
+                        myThis.service.visit_add(myThis.component.form_visit_add.model, ( error_p, result_p ) => {
+                            myThis.component.form_visit_add.model_reset();
+                            myThis.component.form_visit_add.is_processing = false;
+                            if (error_p) {
+                                if (error_p.error_description) {
+                                    this.toastServiceP.toast_show({
+                                        duration: 2000,
+                                        message: error_p.error_description,
+                                        color: 'danger',
+                                    });
+                                    return;
+                                }
+                            }
+
+                            if (result_p) {
+                                if (((result_p.ResponseStatus === false) && result_p.ResponseMessage)) {
+                                    this.toastServiceP.toast_show({
+                                        duration: 2000,
+                                        message: result_p.ResponseMessage,
+                                        color: 'danger',
+                                    });
+                                    return;
+                                }
+
+                                if (result_p.ResponseStatus === true && result_p.ResponseObject) {
+                                    this.toastServiceP.toast_show({
+                                        duration: 2000,
+                                        message: 'Visit added successful',
+                                        color: 'success',
+                                    });
+                                    return;
+                                }
+                            }
+                            return;
+                        });
+                    }
+                });
             } else {
                 console.log('myThis.component.form_visit_add.model ----- ', myThis.component.form_visit_add.model);
                 console.log('myThis.component.form_visit_add.model_error ----- ', myThis.component.form_visit_add.model_error);
@@ -314,56 +360,9 @@ export class AddVisitPage implements OnInit {
                     message: 'Please, review all fields again',
                     buttons: ['OK'],
                 });
-
                 // myThis.component.form_visit_add.model_error = form_visit_add_validate;
             }
-            // return;
-            this.geolocationServiceP.get_current_latitude_longitude(( error_p, result_p ) => {
-                if ( error_p ) {
-                    console.log('get_current_latitude_longitude - error_p ----- ', error_p);
-                }
-                if ( result_p ) {
-                    myThis.component.form_visit_add.model.latitude = result_p.latitude;
-                    myThis.component.form_visit_add.model.longitude = result_p.longitude;
 
-                    myThis.component.form_visit_add.is_processing = true;
-                    myThis.service.visit_add(myThis.component.form_visit_add.model, ( error_p, result_p ) => {
-                        myThis.component.form_visit_add.model_reset();
-                        myThis.component.form_visit_add.is_processing = false;
-                        if (error_p) {
-                            if (error_p.error_description) {
-                                this.toastServiceP.toast_show({
-                                    duration: 2000,
-                                    message: error_p.error_description,
-                                    color: 'danger',
-                                });
-                                return;
-                            }
-                        }
-
-                        if (result_p) {
-                            if (((result_p.ResponseStatus === false) && result_p.ResponseMessage)) {
-                                this.toastServiceP.toast_show({
-                                    duration: 2000,
-                                    message: result_p.ResponseMessage,
-                                    color: 'danger',
-                                });
-                                return;
-                            }
-
-                            if (result_p.ResponseStatus === true && result_p.ResponseObject) {
-                                this.toastServiceP.toast_show({
-                                    duration: 2000,
-                                    message: 'Visit added successful',
-                                    color: 'success',
-                                });
-                                return;
-                            }
-                        }
-                        return;
-                    });
-                }
-            });
             return;
         };
     }
