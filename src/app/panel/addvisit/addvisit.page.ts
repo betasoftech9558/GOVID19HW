@@ -307,15 +307,16 @@ export class AddVisitPage implements OnInit {
             const form_visit_add_validate = myThis.component.form_visit_add.validate();
             console.log('form_visit_add_validate ----- ', form_visit_add_validate);
             if ( form_visit_add_validate === true ) {
+                myThis.component.form_visit_add.is_processing = true;
                 this.geolocationServiceP.get_current_latitude_longitude(( error_p, result_p ) => {
                     if ( error_p ) {
                         console.log('get_current_latitude_longitude - error_p ----- ', error_p);
+                        myThis.component.form_visit_add.is_processing = false;
                     }
                     if ( result_p ) {
                         myThis.component.form_visit_add.model.latitude = result_p.latitude;
                         myThis.component.form_visit_add.model.longitude = result_p.longitude;
 
-                        myThis.component.form_visit_add.is_processing = true;
                         myThis.service.visit_add(myThis.component.form_visit_add.model, ( error_p, result_p ) => {
                             myThis.component.form_visit_add.model_reset();
                             myThis.component.form_visit_add.is_processing = false;
