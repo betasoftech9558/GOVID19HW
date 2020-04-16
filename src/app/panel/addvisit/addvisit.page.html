@@ -22,19 +22,43 @@
         <ion-item lines="full">
           <ion-label position="stacked">Full Name:</ion-label>
           <ion-input type="text" clearInput placeholder="Full Name" name="Name"
-            [(ngModel)]="component.form_visit_add.model.Name" #Name="ngModel"></ion-input>
+            [(ngModel)]="component.form_visit_add.model.Name" #Name="ngModel">
+          </ion-input>
+
+          <ng-container
+            *ngIf="component.form_visit_add.model_error.Name && component.form_visit_add.model_error.Name.errors && component.form_visit_add.model_error.Name.errors.length">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.Name.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ng-container>
         </ion-item>
 
         <ion-item lines="full">
           <ion-label position="stacked">Contact:</ion-label>
           <ion-input type="number" clearInput placeholder="Contact" name="ContactNumber"
-            [(ngModel)]="component.form_visit_add.model.ContactNumber" #ContactNumber="ngModel"></ion-input>
+            [(ngModel)]="component.form_visit_add.model.ContactNumber" #ContactNumber="ngModel">
+          </ion-input>
+
+          <ng-container
+            *ngIf="component.form_visit_add.model_error.ContactNumber && component.form_visit_add.model_error.ContactNumber.errors && component.form_visit_add.model_error.ContactNumber.errors.length">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.ContactNumber.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ng-container>
         </ion-item>
 
         <ion-item lines="full">
           <ion-label position="stacked">Age:</ion-label>
           <ion-input type="number" clearInput name="Age" placeholder="Age"
-            [(ngModel)]="component.form_visit_add.model.Age" #Age="ngModel"></ion-input>
+            [(ngModel)]="component.form_visit_add.model.Age" #Age="ngModel">
+          </ion-input>
+
+          <ng-container
+            *ngIf="component.form_visit_add.model_error.Age && component.form_visit_add.model_error.Age.errors && component.form_visit_add.model_error.Age.errors.length">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.Age.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ng-container>
         </ion-item>
 
         <ion-item lines="full">
@@ -44,29 +68,52 @@
               <ion-col size-md="6">
                 <ion-item lines="none">
                   <ion-label>Male</ion-label>
-                  <ion-radio slot="start" color="danger" value="1"></ion-radio>
+                  <ion-radio slot="start" color="danger" [value]="1"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
                 <ion-item lines="none">
                   <ion-label>Female</ion-label>
-                  <ion-radio slot="start" color="danger" value="2"></ion-radio>
+                  <ion-radio slot="start" color="danger" [value]="2"></ion-radio>
                 </ion-item>
               </ion-col>
             </ion-row>
           </ion-radio-group>
+
+          <ng-container
+            *ngIf="component.form_visit_add.model_error.Gender && component.form_visit_add.model_error.Gender.errors && component.form_visit_add.model_error.Gender.errors.length">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.Gender.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ng-container>
         </ion-item>
 
         <ion-item lines="full">
           <ion-label position="stacked">Address:</ion-label>
           <ion-textarea name="Addresss" placeholder="Address" [(ngModel)]="component.form_visit_add.model.Addresss"
             #Addresss="ngModel"></ion-textarea>
+
+          <ng-container
+            *ngIf="component.form_visit_add.model_error.Addresss && component.form_visit_add.model_error.Addresss.errors && component.form_visit_add.model_error.Addresss.errors.length">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.Addresss.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ng-container>
         </ion-item>
+
         <ion-item lines="none">
           <ion-label position="stacked">Pin code:</ion-label>
           <ion-input type="number" clearInput placeholder="Pin code" name="Pincode"
-            [(ngModel)]="component.form_visit_add.model.Pincode" #Pincode="ngModel"></ion-input>
+            [(ngModel)]="component.form_visit_add.model.Pincode" #Pincode="ngModel">
+          </ion-input>
+
+          <ng-container
+            *ngIf="component.form_visit_add.model_error.Pincode && component.form_visit_add.model_error.Pincode.errors && component.form_visit_add.model_error.Pincode.errors.length">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.Pincode.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ng-container>
         </ion-item>
       </ion-card>
 
@@ -98,11 +145,27 @@
               </ion-col>
             </ion-row>
           </ion-radio-group>
+
+          <ion-input type="number" clearInput placeholder="Days" name="daysDiabetes"
+            [(ngModel)]="component.form_visit_add.model.daysDiabetes" #daysDiabetes="ngModel">
+          </ion-input>
         </ion-item>
-        <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Diabetes" name="daysDiabetes"
-            [(ngModel)]="component.form_visit_add.model.daysDiabetes" #daysDiabetes="ngModel"></ion-input>
-        </ion-item>
+        <ng-container
+          *ngIf="component.form_visit_add.model_error.haveDiabetes && component.form_visit_add.model_error.haveDiabetes.errors && component.form_visit_add.model_error.haveDiabetes.errors.length">
+          <ion-item lines="none">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.haveDiabetes.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ion-item>
+        </ng-container>
+        <ng-container
+          *ngIf="component.form_visit_add.model_error.daysDiabetes && component.form_visit_add.model_error.daysDiabetes.errors && component.form_visit_add.model_error.daysDiabetes.errors.length">
+          <ion-item lines="none">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.daysDiabetes.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ion-item>
+        </ng-container>
 
         <ion-item lines="none">
           <ion-label>B.P.:</ion-label>
@@ -125,11 +188,19 @@
               </ion-col>
             </ion-row>
           </ion-radio-group>
+
+          <ion-input type="number" clearInput placeholder="Days" name="daysBP"
+            [(ngModel)]="component.form_visit_add.model.daysBP" #daysBP="ngModel">
+          </ion-input>
         </ion-item>
-        <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of B.P." name="daysBP"
-            [(ngModel)]="component.form_visit_add.model.daysBP" #daysBP="ngModel"></ion-input>
-        </ion-item>
+        <ng-container
+          *ngIf="component.form_visit_add.model_error.haveBP && component.form_visit_add.model_error.haveBP.errors && component.form_visit_add.model_error.haveBP.errors.length">
+          <ion-item lines="none">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.haveBP.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ion-item>
+        </ng-container>
 
         <ion-item lines="none">
           <ion-label>Heart Problem:</ion-label>
@@ -153,11 +224,19 @@
               </ion-col>
             </ion-row>
           </ion-radio-group>
+
+          <ion-input type="number" clearInput placeholder="Days" name="daysHeartProblem"
+            [(ngModel)]="component.form_visit_add.model.daysHeartProblem" #daysHeartProblem="ngModel">
+          </ion-input>
         </ion-item>
-        <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Heart Problem" name="daysHeartProblem"
-            [(ngModel)]="component.form_visit_add.model.daysHeartProblem" #daysHeartProblem="ngModel"></ion-input>
-        </ion-item>
+        <ng-container
+          *ngIf="component.form_visit_add.model_error.haveHeartProblem && component.form_visit_add.model_error.haveHeartProblem.errors && component.form_visit_add.model_error.haveHeartProblem.errors.length">
+          <ion-item lines="none">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.haveHeartProblem.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ion-item>
+        </ng-container>
 
         <ion-item lines="none">
           <ion-label>Lungs Problem:</ion-label>
@@ -181,11 +260,19 @@
               </ion-col>
             </ion-row>
           </ion-radio-group>
+
+          <ion-input type="number" clearInput placeholder="Days" name="daysLungsProblem"
+            [(ngModel)]="component.form_visit_add.model.daysLungsProblem" #daysLungsProblem="ngModel">
+          </ion-input>
         </ion-item>
-        <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Lungs Problem" name="daysLungsProblem"
-            [(ngModel)]="component.form_visit_add.model.daysLungsProblem" #daysLungsProblem="ngModel"></ion-input>
-        </ion-item>
+        <ng-container
+          *ngIf="component.form_visit_add.model_error.haveLungsProblem && component.form_visit_add.model_error.haveLungsProblem.errors && component.form_visit_add.model_error.haveLungsProblem.errors.length">
+          <ion-item lines="none">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.haveLungsProblem.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ion-item>
+        </ng-container>
 
         <ion-item lines="none">
           <ion-label>Kidney Related Problem:</ion-label>
@@ -209,11 +296,20 @@
               </ion-col>
             </ion-row>
           </ion-radio-group>
+
+          <ion-input type="number" clearInput placeholder="Days" name="daysKidenyProblem"
+            [(ngModel)]="component.form_visit_add.model.daysKidenyProblem" #daysKidenyProblem="ngModel">
+          </ion-input>
         </ion-item>
-        <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Kidney Related Problem" name="daysKidenyProblem"
-            [(ngModel)]="component.form_visit_add.model.daysKidenyProblem" #daysKidenyProblem="ngModel"></ion-input>
-        </ion-item>
+        <ng-container
+          *ngIf="component.form_visit_add.model_error.haveKidenyProblem && component.form_visit_add.model_error.haveKidenyProblem.errors && component.form_visit_add.model_error.haveKidenyProblem.errors.length">
+          <ion-item lines="none">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.haveKidenyProblem.errors"
+              color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ion-item>
+        </ng-container>
         <ion-item lines="none"></ion-item>
       </ion-card>
 
@@ -244,11 +340,19 @@
               </ion-col>
             </ion-row>
           </ion-radio-group>
+
+          <ion-input type="number" clearInput placeholder="Days" name="daysCough"
+            [(ngModel)]="component.form_visit_add.model.daysCough" #daysCough="ngModel">
+          </ion-input>
         </ion-item>
-        <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Medium To High Cough" name="daysCough"
-            [(ngModel)]="component.form_visit_add.model.daysCough" #daysCough="ngModel"></ion-input>
-        </ion-item>
+        <ng-container
+          *ngIf="component.form_visit_add.model_error.haveCough && component.form_visit_add.model_error.haveCough.errors && component.form_visit_add.model_error.haveCough.errors.length">
+          <ion-item lines="none">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.haveCough.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ion-item>
+        </ng-container>
 
         <ion-item lines="none">
           <ion-label>Dry Cough:</ion-label>
@@ -272,11 +376,19 @@
               </ion-col>
             </ion-row>
           </ion-radio-group>
+
+          <ion-input type="number" clearInput placeholder="Days" name="daysDryCough"
+            [(ngModel)]="component.form_visit_add.model.daysDryCough" #daysDryCough="ngModel">
+          </ion-input>
         </ion-item>
-        <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Dry Cough" name="daysDryCough"
-            [(ngModel)]="component.form_visit_add.model.daysDryCough" #daysDryCough="ngModel"></ion-input>
-        </ion-item>
+        <ng-container
+          *ngIf="component.form_visit_add.model_error.haveDryCough && component.form_visit_add.model_error.haveDryCough.errors && component.form_visit_add.model_error.haveDryCough.errors.length">
+          <ion-item lines="none">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.haveDryCough.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ion-item>
+        </ng-container>
 
         <ion-item lines="none">
           <ion-label>Sore Throat:</ion-label>
@@ -300,11 +412,19 @@
               </ion-col>
             </ion-row>
           </ion-radio-group>
+
+          <ion-input type="number" clearInput placeholder="Days" name="daysSoreThroat"
+            [(ngModel)]="component.form_visit_add.model.daysSoreThroat" #daysSoreThroat="ngModel">
+          </ion-input>
         </ion-item>
-        <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Sore Throat" name="daysSoreThroat"
-            [(ngModel)]="component.form_visit_add.model.daysSoreThroat" #daysSoreThroat="ngModel"></ion-input>
-        </ion-item>
+        <ng-container
+          *ngIf="component.form_visit_add.model_error.haveSoreThroat && component.form_visit_add.model_error.haveSoreThroat.errors && component.form_visit_add.model_error.haveSoreThroat.errors.length">
+          <ion-item lines="none">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.haveSoreThroat.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ion-item>
+        </ng-container>
 
         <ion-item lines="none">
           <ion-label>Problem In Smell:</ion-label>
@@ -328,11 +448,19 @@
               </ion-col>
             </ion-row>
           </ion-radio-group>
+
+          <ion-input type="number" clearInput placeholder="Days" name="daysSmellProblem"
+            [(ngModel)]="component.form_visit_add.model.daysSmellProblem" #daysSmellProblem="ngModel">
+          </ion-input>
         </ion-item>
-        <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Problem In Smell" name="daysSmellProblem"
-            [(ngModel)]="component.form_visit_add.model.daysSmellProblem" #daysSmellProblem="ngModel"></ion-input>
-        </ion-item>
+        <ng-container
+          *ngIf="component.form_visit_add.model_error.haveSmellProblem && component.form_visit_add.model_error.haveSmellProblem.errors && component.form_visit_add.model_error.haveSmellProblem.errors.length">
+          <ion-item lines="none">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.haveSmellProblem.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ion-item>
+        </ng-container>
 
         <ion-item lines="none">
           <ion-label>Problem In Breathing:</ion-label>
@@ -356,11 +484,20 @@
               </ion-col>
             </ion-row>
           </ion-radio-group>
+
+          <ion-input type="number" clearInput placeholder="Days" name="daysBreathProblem"
+            [(ngModel)]="component.form_visit_add.model.daysBreathProblem" #daysBreathProblem="ngModel">
+          </ion-input>
         </ion-item>
-        <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Problem In Breathing" name="daysBreathProblem"
-            [(ngModel)]="component.form_visit_add.model.daysBreathProblem" #daysBreathProblem="ngModel"></ion-input>
-        </ion-item>
+        <ng-container
+          *ngIf="component.form_visit_add.model_error.haveBreathProblem && component.form_visit_add.model_error.haveBreathProblem.errors && component.form_visit_add.model_error.haveBreathProblem.errors.length">
+          <ion-item lines="none">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.haveBreathProblem.errors"
+              color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ion-item>
+        </ng-container>
 
         <ion-item lines="none">
           <ion-label>Body Pain:</ion-label>
@@ -384,11 +521,19 @@
               </ion-col>
             </ion-row>
           </ion-radio-group>
+
+          <ion-input type="number" clearInput placeholder="Days" name="daysBodyPain"
+            [(ngModel)]="component.form_visit_add.model.daysBodyPain" #daysBodyPain="ngModel">
+          </ion-input>
         </ion-item>
-        <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Body Pain" name="daysBodyPain"
-            [(ngModel)]="component.form_visit_add.model.daysBodyPain" #daysBodyPain="ngModel"></ion-input>
-        </ion-item>
+        <ng-container
+          *ngIf="component.form_visit_add.model_error.haveBodyPain && component.form_visit_add.model_error.haveBodyPain.errors && component.form_visit_add.model_error.haveBodyPain.errors.length">
+          <ion-item lines="none">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.haveBodyPain.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ion-item>
+        </ng-container>
 
         <ion-item lines="none">
           <ion-label>Chest Pain:</ion-label>
@@ -412,11 +557,19 @@
               </ion-col>
             </ion-row>
           </ion-radio-group>
+
+          <ion-input type="number" clearInput placeholder="Days" name="daysChestPain"
+            [(ngModel)]="component.form_visit_add.model.daysChestPain" #daysChestPain="ngModel">
+          </ion-input>
         </ion-item>
-        <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Chest Pain" name="daysChestPain"
-            [(ngModel)]="component.form_visit_add.model.daysChestPain" #daysChestPain="ngModel"></ion-input>
-        </ion-item>
+        <ng-container
+          *ngIf="component.form_visit_add.model_error.haveChestPain && component.form_visit_add.model_error.haveChestPain.errors && component.form_visit_add.model_error.haveChestPain.errors.length">
+          <ion-item lines="none">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.haveChestPain.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ion-item>
+        </ng-container>
 
         <ion-item lines="none">
           <ion-label>Diarrhea:</ion-label>
@@ -440,11 +593,19 @@
               </ion-col>
             </ion-row>
           </ion-radio-group>
+
+          <ion-input type="number" clearInput placeholder="Days" name="daysDiarrheoa"
+            [(ngModel)]="component.form_visit_add.model.daysDiarrheoa" #daysDiarrheoa="ngModel">
+          </ion-input>
         </ion-item>
-        <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Diarrhea" name="daysDiarrheoa"
-            [(ngModel)]="component.form_visit_add.model.daysDiarrheoa" #daysDiarrheoa="ngModel"></ion-input>
-        </ion-item>
+        <ng-container
+          *ngIf="component.form_visit_add.model_error.haveDiarrheoa && component.form_visit_add.model_error.haveDiarrheoa.errors && component.form_visit_add.model_error.haveDiarrheoa.errors.length">
+          <ion-item lines="none">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.haveDiarrheoa.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ion-item>
+        </ng-container>
 
         <ion-item lines="none">
           <ion-label>Fever:</ion-label>
@@ -467,11 +628,19 @@
               </ion-col>
             </ion-row>
           </ion-radio-group>
+
+          <ion-input type="number" clearInput placeholder="Days" name="daysFever"
+            [(ngModel)]="component.form_visit_add.model.daysFever" #daysFever="ngModel">
+          </ion-input>
         </ion-item>
-        <ion-item lines="full">
-          <ion-input type="number" clearInput placeholder="Days of Fever" name="daysFever"
-            [(ngModel)]="component.form_visit_add.model.daysFever" #daysFever="ngModel"></ion-input>
-        </ion-item>
+        <ng-container
+          *ngIf="component.form_visit_add.model_error.haveFever && component.form_visit_add.model_error.haveFever.errors && component.form_visit_add.model_error.haveFever.errors.length">
+          <ion-item lines="none">
+            <ion-text *ngFor="let error of component.form_visit_add.model_error.haveFever.errors" color="danger">
+              {{ error.message }}
+            </ion-text>
+          </ion-item>
+        </ng-container>
 
         <ion-item lines="full">
           <ion-label>SOS:</ion-label>
