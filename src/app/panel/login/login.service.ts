@@ -59,7 +59,8 @@ export class LoginService {
 
         myThis.service.userSignout = (is_reload) => {
             // alert('userSignout');
-            localStorage.clear();
+            // localStorage.clear();
+            localStorage.removeItem('ud');
             if (is_reload) {
                 window.location.reload();
             }
@@ -73,7 +74,8 @@ export class LoginService {
                 return true;
             }
 
-            localStorage.clear();
+            // localStorage.clear();
+            localStorage.removeItem('ud');
             return false;
         };
 
