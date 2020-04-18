@@ -42,7 +42,7 @@
           </ion-input>
 
           <ng-container
-            *ngIf="component.form_visit_add.model_error.ContactNumber && component.form_visit_add.model_error.ContactNumber.errors && component.form_visit_add.model_error.ContactNumber.errors.length">
+            *ngIf="component.form_visit_add.model_error.ContactNumber && component.form_visit_add.model_error.ContactNumber.errors">
             <ion-text *ngFor="let error of component.form_visit_add.model_error.ContactNumber.errors" color="danger">
               {{ error.message }}
             </ion-text>
