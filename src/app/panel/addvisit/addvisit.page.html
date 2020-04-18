@@ -19,7 +19,7 @@
           <ion-text color="danger"><strong>જનરલ માહિતી</strong></ion-text>
         </ion-item>
 
-        <ion-item lines="full">
+        <ion-item lines="none">
           <!-- <ion-label position="stacked">Full Name:</ion-label> -->
           <ion-label position="stacked"><strong class="f-20">નામ :</strong></ion-label>
           <ion-input type="text" clearInput placeholder="Full Name" name="Name"
@@ -33,8 +33,8 @@
             </ion-text>
           </ng-container>
         </ion-item>
-
-        <ion-item lines="full">
+        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+        <ion-item lines="none">
           <!-- <ion-label position="stacked">Contact:</ion-label> -->
           <ion-label position="stacked"><strong class="f-20">મોબાઇલ નં. :</strong></ion-label>
           <ion-input type="number" clearInput placeholder="Contact" name="ContactNumber"
@@ -48,8 +48,8 @@
             </ion-text>
           </ng-container>
         </ion-item>
-
-        <ion-item lines="full">
+        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+        <ion-item lines="none">
           <!-- <ion-label position="stacked">Age:</ion-label> -->
           <ion-label position="stacked"><strong class="f-20">ઉંમર :</strong></ion-label>
           <ion-input type="number" clearInput name="Age" placeholder="Age"
@@ -63,8 +63,8 @@
             </ion-text>
           </ng-container>
         </ion-item>
-
-        <ion-item lines="full">
+        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+        <ion-item lines="none">
           <ion-label position="stacked" style="margin-bottom: 1px !important;">
             <strong class="f-20">જાતિ : </strong>
           </ion-label>
@@ -93,8 +93,8 @@
             </ion-text>
           </ng-container>
         </ion-item>
-
-        <ion-item lines="full">
+        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+        <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">એડ્રેસ :</strong></ion-label>
           <ion-textarea name="Addresss" placeholder="Address" [(ngModel)]="component.form_visit_add.model.Addresss"
@@ -107,7 +107,7 @@
             </ion-text>
           </ng-container>
         </ion-item>
-
+        <div style="background-color: #d7d8da !important; height: 1px;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">પીન કોડ : </strong></ion-label>
@@ -134,12 +134,12 @@
           <ion-label position="stacked">
             <strong class="f-20">ડાયાબિટીસ :</strong></ion-label>
         </ion-item>
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-radio-group name="haveDiabetes" [(ngModel)]="component.form_visit_add.model.haveDiabetes"
             #haveDiabetes="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true">
                   </ion-radio>
@@ -147,7 +147,7 @@
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -158,6 +158,7 @@
           <ion-input type="number" clearInput placeholder="Days" name="daysDiabetes"
             [(ngModel)]="component.form_visit_add.model.daysDiabetes" #daysDiabetes="ngModel">
           </ion-input>
+
         </ion-item>
         <ng-container
           *ngIf="component.form_visit_add.model_error.haveDiabetes && component.form_visit_add.model_error.haveDiabetes.errors && component.form_visit_add.model_error.haveDiabetes.errors.length">
@@ -175,23 +176,23 @@
             </ion-text>
           </ion-item>
         </ng-container>
-
+        <div style="background-color: #d7d8da !important; height: 1px;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">B.P.:</strong></ion-label>
         </ion-item>
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-radio-group name="haveBP" [(ngModel)]="component.form_visit_add.model.haveBP" #haveBP="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -219,23 +220,23 @@
             </ion-text>
           </ion-item>
         </ng-container>
-
+        <div style="background-color: #d7d8da !important; height: 1px;"></div>
         <ion-item lines="none">
           <ion-label position="stacked"><strong class="f-20">હૃદય રોગ સંબંધિત તકલીફ :</strong></ion-label>
         </ion-item>
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-radio-group name="haveHeartProblem" [(ngModel)]="component.form_visit_add.model.haveHeartProblem"
             #haveHeartProblem="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -263,24 +264,24 @@
             </ion-text>
           </ion-item>
         </ng-container>
-
+        <div style="background-color: #d7d8da !important; height: 1px;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">ફેફસા સંબંધિત તકલીફ :</strong></ion-label>
         </ion-item>
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-radio-group name="haveLungsProblem" [(ngModel)]="component.form_visit_add.model.haveLungsProblem"
             #haveLungsProblem="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -308,24 +309,24 @@
             </ion-text>
           </ion-item>
         </ng-container>
-
+        <div style="background-color: #d7d8da !important; height: 1px;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">કિડની સંબંધિત તકલીફ :</strong></ion-label>
         </ion-item>
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-radio-group name="haveKidenyProblem" [(ngModel)]="component.form_visit_add.model.haveKidenyProblem"
             #haveKidenyProblem="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -355,7 +356,6 @@
             </ion-text>
           </ion-item>
         </ng-container>
-        <ion-item lines="none"></ion-item>
       </ion-card>
 
       <ion-card>
@@ -368,18 +368,18 @@
           <ion-label position="stacked">
             <strong class="f-20">મધ્યમ થી વધુ કફ :</strong></ion-label>
         </ion-item>
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-radio-group name="haveCough" [(ngModel)]="component.form_visit_add.model.haveCough" #haveCough="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -407,24 +407,24 @@
             </ion-text>
           </ion-item>
         </ng-container>
-
+        <div style="background-color: #d7d8da !important; height: 1px;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">સૂકી ઉધરસ : </strong></ion-label>
         </ion-item>
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-radio-group name="haveDryCough" [(ngModel)]="component.form_visit_add.model.haveDryCough"
             #haveDryCough="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -452,24 +452,24 @@
             </ion-text>
           </ion-item>
         </ng-container>
-
+        <div style="background-color: #d7d8da !important; height: 1px;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">ગળા ની ખરાશ : </strong></ion-label>
         </ion-item>
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-radio-group name="haveSoreThroat" [(ngModel)]="component.form_visit_add.model.haveSoreThroat"
             #haveSoreThroat="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -497,24 +497,24 @@
             </ion-text>
           </ion-item>
         </ng-container>
-
+        <div style="background-color: #d7d8da !important; height: 1px;"></div>
         <ion-item lines="none">
           <ion-label position="stacked"><strong class="f-20">સુંઘવાની શક્તિ નબળી પડી ગઇ છે કે કેમ? :</strong>
           </ion-label>
         </ion-item>
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-radio-group name="haveSmellProblem" [(ngModel)]="component.form_visit_add.model.haveSmellProblem"
             #haveSmellProblem="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -542,26 +542,26 @@
             </ion-text>
           </ion-item>
         </ng-container>
-
+        <div style="background-color: #d7d8da !important; height: 1px;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">
               શ્વાસ લેવા માં તકલીફ પડે છે કે કેમ? :
             </strong></ion-label>
         </ion-item>
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-radio-group name="haveBreathProblem" [(ngModel)]="component.form_visit_add.model.haveBreathProblem"
             #haveBreathProblem="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -591,23 +591,23 @@
             </ion-text>
           </ion-item>
         </ng-container>
-
+        <div style="background-color: #d7d8da !important; height: 1px;"></div>
         <ion-item lines="none">
           <ion-label position="stacked"><strong class="f-20">શારિરીક નબળાઈ : </strong></ion-label>
         </ion-item>
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-radio-group name="haveBodyPain" [(ngModel)]="component.form_visit_add.model.haveBodyPain"
             #haveBodyPain="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -635,26 +635,26 @@
             </ion-text>
           </ion-item>
         </ng-container>
-
+        <div style="background-color: #d7d8da !important; height: 1px;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">
               છાતી માં દુખાવો :
             </strong></ion-label>
         </ion-item>
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-radio-group name="haveChestPain" [(ngModel)]="component.form_visit_add.model.haveChestPain"
             #haveChestPain="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -682,24 +682,24 @@
             </ion-text>
           </ion-item>
         </ng-container>
-
+        <div style="background-color: #d7d8da !important; height: 1px;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">ઝાડા : </strong></ion-label>
         </ion-item>
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-radio-group name="haveDiarrheoa" [(ngModel)]="component.form_visit_add.model.haveDiarrheoa"
             #haveDiarrheoa="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>Yes</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>No</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -727,23 +727,23 @@
             </ion-text>
           </ion-item>
         </ng-container>
-
+        <div style="background-color: #d7d8da !important; height: 1px;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">તાવ : </strong></ion-label>
         </ion-item>
-        <ion-item lines="full">
+        <ion-item lines="none">
           <ion-radio-group name="haveFever" [(ngModel)]="component.form_visit_add.model.haveFever" #haveFever="ngModel">
             <ion-row>
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>હા</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
-                <ion-item lines="none">
+                <ion-item lines="none" class="m-l-25">
                   <ion-label>ના</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
@@ -771,7 +771,7 @@
             </ion-text>
           </ion-item>
         </ng-container>
-
+        <div style="background-color: #d7d8da !important; height: 1px;"></div>
         <ion-item lines="full">
           <ion-label>SOS:</ion-label>
           <ion-checkbox color="danger" name="IsSOS" [(ngModel)]="component.form_visit_add.model.IsSOS" #IsSOS="ngModel">
