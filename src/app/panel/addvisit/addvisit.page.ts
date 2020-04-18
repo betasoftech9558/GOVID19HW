@@ -91,40 +91,40 @@ export class AddVisitPage implements OnInit {
         myThis.component.form_visit_add.model_reset();
 
         myThis.component.form_visit_add.model_error_reset = () => {
-            myThis.component.form_visit_add.model_error.Name = {errors: []};
-            myThis.component.form_visit_add.model_error.ContactNumber = {errors: []};
-            myThis.component.form_visit_add.model_error.Age = {errors: []};
-            myThis.component.form_visit_add.model_error.Gender = {errors: []};
-            myThis.component.form_visit_add.model_error.Addresss = {errors: []};
-            myThis.component.form_visit_add.model_error.Pincode = {errors: []};
-            myThis.component.form_visit_add.model_error.haveDiabetes = {errors: []};
-            myThis.component.form_visit_add.model_error.daysDiabetes = {errors: []};
-            myThis.component.form_visit_add.model_error.haveBP = {errors: []};
-            myThis.component.form_visit_add.model_error.daysBP = {errors: []};
-            myThis.component.form_visit_add.model_error.haveHeartProblem = {errors: []};
-            myThis.component.form_visit_add.model_error.daysHeartProblem = {errors: []};
-            myThis.component.form_visit_add.model_error.haveLungsProblem = {errors: []};
-            myThis.component.form_visit_add.model_error.daysLungsProblem = {errors: []};
-            myThis.component.form_visit_add.model_error.haveKidenyProblem = {errors: []};
-            myThis.component.form_visit_add.model_error.daysKidenyProblem = {errors: []};
-            myThis.component.form_visit_add.model_error.haveCough = {errors: []};
-            myThis.component.form_visit_add.model_error.daysCough = {errors: []};
-            myThis.component.form_visit_add.model_error.haveDryCough = {errors: []};
-            myThis.component.form_visit_add.model_error.daysDryCough = {errors: []};
-            myThis.component.form_visit_add.model_error.haveSoreThroat = {errors: []};
-            myThis.component.form_visit_add.model_error.daysSoreThroat = {errors: []};
-            myThis.component.form_visit_add.model_error.haveSmellProblem = {errors: []};
-            myThis.component.form_visit_add.model_error.daysSmellProblem = {errors: []};
-            myThis.component.form_visit_add.model_error.haveBreathProblem = {errors: []};
-            myThis.component.form_visit_add.model_error.daysBreathProblem = {errors: []};
-            myThis.component.form_visit_add.model_error.haveBodyPain = {errors: []};
-            myThis.component.form_visit_add.model_error.daysBodyPain = {errors: []};
-            myThis.component.form_visit_add.model_error.haveChestPain = {errors: []};
-            myThis.component.form_visit_add.model_error.daysChestPain = {errors: []};
-            myThis.component.form_visit_add.model_error.haveDiarrheoa = {errors: []};
-            myThis.component.form_visit_add.model_error.daysDiarrheoa = {errors: []};
-            myThis.component.form_visit_add.model_error.haveFever = {errors: []};
-            myThis.component.form_visit_add.model_error.daysFever = {errors: []};
+            myThis.component.form_visit_add.model_error.Name = { errors: [] };
+            myThis.component.form_visit_add.model_error.ContactNumber = { errors: [] };
+            myThis.component.form_visit_add.model_error.Age = { errors: [] };
+            myThis.component.form_visit_add.model_error.Gender = { errors: [] };
+            myThis.component.form_visit_add.model_error.Addresss = { errors: [] };
+            myThis.component.form_visit_add.model_error.Pincode = { errors: [] };
+            myThis.component.form_visit_add.model_error.haveDiabetes = { errors: [] };
+            myThis.component.form_visit_add.model_error.daysDiabetes = { errors: [] };
+            myThis.component.form_visit_add.model_error.haveBP = { errors: [] };
+            myThis.component.form_visit_add.model_error.daysBP = { errors: [] };
+            myThis.component.form_visit_add.model_error.haveHeartProblem = { errors: [] };
+            myThis.component.form_visit_add.model_error.daysHeartProblem = { errors: [] };
+            myThis.component.form_visit_add.model_error.haveLungsProblem = { errors: [] };
+            myThis.component.form_visit_add.model_error.daysLungsProblem = { errors: [] };
+            myThis.component.form_visit_add.model_error.haveKidenyProblem = { errors: [] };
+            myThis.component.form_visit_add.model_error.daysKidenyProblem = { errors: [] };
+            myThis.component.form_visit_add.model_error.haveCough = { errors: [] };
+            myThis.component.form_visit_add.model_error.daysCough = { errors: [] };
+            myThis.component.form_visit_add.model_error.haveDryCough = { errors: [] };
+            myThis.component.form_visit_add.model_error.daysDryCough = { errors: [] };
+            myThis.component.form_visit_add.model_error.haveSoreThroat = { errors: [] };
+            myThis.component.form_visit_add.model_error.daysSoreThroat = { errors: [] };
+            myThis.component.form_visit_add.model_error.haveSmellProblem = { errors: [] };
+            myThis.component.form_visit_add.model_error.daysSmellProblem = { errors: [] };
+            myThis.component.form_visit_add.model_error.haveBreathProblem = { errors: [] };
+            myThis.component.form_visit_add.model_error.daysBreathProblem = { errors: [] };
+            myThis.component.form_visit_add.model_error.haveBodyPain = { errors: [] };
+            myThis.component.form_visit_add.model_error.daysBodyPain = { errors: [] };
+            myThis.component.form_visit_add.model_error.haveChestPain = { errors: [] };
+            myThis.component.form_visit_add.model_error.daysChestPain = { errors: [] };
+            myThis.component.form_visit_add.model_error.haveDiarrheoa = { errors: [] };
+            myThis.component.form_visit_add.model_error.daysDiarrheoa = { errors: [] };
+            myThis.component.form_visit_add.model_error.haveFever = { errors: [] };
+            myThis.component.form_visit_add.model_error.daysFever = { errors: [] };
         };
 
         myThis.component.form_visit_add.model_error_reset();
@@ -132,169 +132,169 @@ export class AddVisitPage implements OnInit {
         myThis.component.form_visit_add.validate = () => {
             let is_valid = true;
             myThis.component.form_visit_add.model_error_reset();
-            if ( myThis.component.form_visit_add.model.Name.toString().trim() === '' ) {
+            if (myThis.component.form_visit_add.model.Name.toString().trim() === '') {
                 myThis.component.form_visit_add.model_error.Name.errors.push({ message: 'Full Name is required' });
                 is_valid = false;
             }
 
-            if ( myThis.component.form_visit_add.model.ContactNumber.toString().trim() === '' ) {
+            if (myThis.component.form_visit_add.model.ContactNumber.toString().trim() === '') {
                 myThis.component.form_visit_add.model_error.ContactNumber.errors.push({ message: 'Contact Number is required' });
                 is_valid = false;
             }
-            if ( myThis.component.form_visit_add.model.ContactNumber.toString().trim().length !== 10 ) {
-                myThis.component.form_visit_add.model_error.ContactNumber.errors.push({ message: 'Contact Number length must be 10' });
-                is_valid = false;
-            }
+            // if ( myThis.component.form_visit_add.model.ContactNumber.toString().trim().length !== 10 ) {
+            //     myThis.component.form_visit_add.model_error.ContactNumber.errors.push({ message: 'Contact Number length must be 10' });
+            //     is_valid = false;
+            // }
 
-            if ( myThis.component.form_visit_add.model.Age.toString().trim() === '' ) {
+            if (myThis.component.form_visit_add.model.Age.toString().trim() === '') {
                 myThis.component.form_visit_add.model_error.Age.errors.push({ message: 'Age is required' });
                 is_valid = false;
             }
-            if ( (myThis.component.form_visit_add.model.Age.toString().trim().length < 1) || (myThis.component.form_visit_add.model.Age.toString().trim().length > 2) ) {
-                myThis.component.form_visit_add.model_error.Age.errors.push({ message: 'Age length must be between 1 and 2' });
-                is_valid = false;
-            }
+            // if ( (myThis.component.form_visit_add.model.Age.toString().trim().length < 1) || (myThis.component.form_visit_add.model.Age.toString().trim().length > 2) ) {
+            //     myThis.component.form_visit_add.model_error.Age.errors.push({ message: 'Age length must be between 1 and 2' });
+            //     is_valid = false;
+            // }
 
-            if ( myThis.component.form_visit_add.model.Gender === 0 ) {
+            if (myThis.component.form_visit_add.model.Gender === 0) {
                 myThis.component.form_visit_add.model_error.Gender.errors.push({ message: 'Gender is required' });
                 is_valid = false;
             }
 
-            if ( myThis.component.form_visit_add.model.Addresss.toString().trim() === '' ) {
+            if (myThis.component.form_visit_add.model.Addresss.toString().trim() === '') {
                 myThis.component.form_visit_add.model_error.Addresss.errors.push({ message: 'Addresss is required' });
                 is_valid = false;
             }
 
-            if ( myThis.component.form_visit_add.model.Pincode.toString().trim() === '' ) {
+            if (myThis.component.form_visit_add.model.Pincode.toString().trim() === '') {
                 myThis.component.form_visit_add.model_error.Pincode.errors.push({ message: 'Pincode is required' });
                 is_valid = false;
             }
 
-            if ( myThis.component.form_visit_add.model.haveDiabetes === 0 ) {
+            if (myThis.component.form_visit_add.model.haveDiabetes === 0) {
                 myThis.component.form_visit_add.model_error.haveDiabetes.errors.push({ message: 'Have Diabetes or not?' });
                 is_valid = false;
             }
-            if ( (myThis.component.form_visit_add.model.daysDiabetes.toString().trim().length > 2) ) {
-                myThis.component.form_visit_add.model_error.daysDiabetes.errors.push({ message: 'Diabetes days length must be between 1 and 2' });
-                is_valid = false;
-            }
+            // if ((myThis.component.form_visit_add.model.daysDiabetes.toString().trim().length > 2)) {
+            //     myThis.component.form_visit_add.model_error.daysDiabetes.errors.push({ message: 'Diabetes days length must be between 1 and 2' });
+            //     is_valid = false;
+            // }
 
-            if ( myThis.component.form_visit_add.model.haveBP === 0 ) {
+            if (myThis.component.form_visit_add.model.haveBP === 0) {
                 myThis.component.form_visit_add.model_error.haveBP.errors.push({ message: 'Have BP or not?' });
                 is_valid = false;
             }
-            if ( (myThis.component.form_visit_add.model.daysBP.toString().trim().length > 2) ) {
-                myThis.component.form_visit_add.model_error.daysBP.errors.push({ message: 'BP days length must be between 1 and 2' });
-                is_valid = false;
-            }
+            // if ((myThis.component.form_visit_add.model.daysBP.toString().trim().length > 2)) {
+            //     myThis.component.form_visit_add.model_error.daysBP.errors.push({ message: 'BP days length must be between 1 and 2' });
+            //     is_valid = false;
+            // }
 
-            if ( myThis.component.form_visit_add.model.haveHeartProblem === 0 ) {
+            if (myThis.component.form_visit_add.model.haveHeartProblem === 0) {
                 myThis.component.form_visit_add.model_error.haveHeartProblem.errors.push({ message: 'Have Heart Problem or not?' });
                 is_valid = false;
             }
-            if ( (myThis.component.form_visit_add.model.daysHeartProblem.toString().trim().length > 2) ) {
-                myThis.component.form_visit_add.model_error.daysHeartProblem.errors.push({ message: 'HeartProblem days length must be between 1 and 2' });
-                is_valid = false;
-            }
+            // if ((myThis.component.form_visit_add.model.daysHeartProblem.toString().trim().length > 2)) {
+            //     myThis.component.form_visit_add.model_error.daysHeartProblem.errors.push({ message: 'HeartProblem days length must be between 1 and 2' });
+            //     is_valid = false;
+            // }
 
-            if ( myThis.component.form_visit_add.model.haveLungsProblem === 0 ) {
+            if (myThis.component.form_visit_add.model.haveLungsProblem === 0) {
                 myThis.component.form_visit_add.model_error.haveLungsProblem.errors.push({ message: 'Have Lungs Problem or not?' });
                 is_valid = false;
             }
-            if ( (myThis.component.form_visit_add.model.daysLungsProblem.toString().trim().length > 2) ) {
-                myThis.component.form_visit_add.model_error.daysLungsProblem.errors.push({ message: 'LungsProblem days length must be between 1 and 2' });
-                is_valid = false;
-            }
+            // if ((myThis.component.form_visit_add.model.daysLungsProblem.toString().trim().length > 2)) {
+            //     myThis.component.form_visit_add.model_error.daysLungsProblem.errors.push({ message: 'LungsProblem days length must be between 1 and 2' });
+            //     is_valid = false;
+            // }
 
-            if ( myThis.component.form_visit_add.model.haveKidenyProblem === 0 ) {
+            if (myThis.component.form_visit_add.model.haveKidenyProblem === 0) {
                 myThis.component.form_visit_add.model_error.haveKidenyProblem.errors.push({ message: 'Have Kidney Problem or not?' });
                 is_valid = false;
             }
-            if ( (myThis.component.form_visit_add.model.daysKidenyProblem.toString().trim().length > 2) ) {
-                myThis.component.form_visit_add.model_error.daysKidenyProblem.errors.push({ message: 'KidenyProblem days length must be between 1 and 2' });
-                is_valid = false;
-            }
+            // if ((myThis.component.form_visit_add.model.daysKidenyProblem.toString().trim().length > 2)) {
+            //     myThis.component.form_visit_add.model_error.daysKidenyProblem.errors.push({ message: 'KidenyProblem days length must be between 1 and 2' });
+            //     is_valid = false;
+            // }
 
-            if ( myThis.component.form_visit_add.model.haveCough === 0 ) {
+            if (myThis.component.form_visit_add.model.haveCough === 0) {
                 myThis.component.form_visit_add.model_error.haveCough.errors.push({ message: 'Have Cough or not?' });
                 is_valid = false;
             }
-            if ( (myThis.component.form_visit_add.model.daysCough.toString().trim().length > 2) ) {
-                myThis.component.form_visit_add.model_error.daysCough.errors.push({ message: 'Cough days length must be between 1 and 2' });
-                is_valid = false;
-            }
+            // if ((myThis.component.form_visit_add.model.daysCough.toString().trim().length > 2)) {
+            //     myThis.component.form_visit_add.model_error.daysCough.errors.push({ message: 'Cough days length must be between 1 and 2' });
+            //     is_valid = false;
+            // }
 
-            if ( myThis.component.form_visit_add.model.haveDryCough === 0 ) {
+            if (myThis.component.form_visit_add.model.haveDryCough === 0) {
                 myThis.component.form_visit_add.model_error.haveDryCough.errors.push({ message: 'Have Dry Cough or not?' });
                 is_valid = false;
             }
-            if ( (myThis.component.form_visit_add.model.daysDryCough.toString().trim().length > 2) ) {
-                myThis.component.form_visit_add.model_error.daysDryCough.errors.push({ message: 'DryCough days length must be between 1 and 2' });
-                is_valid = false;
-            }
+            // if ((myThis.component.form_visit_add.model.daysDryCough.toString().trim().length > 2)) {
+            //     myThis.component.form_visit_add.model_error.daysDryCough.errors.push({ message: 'DryCough days length must be between 1 and 2' });
+            //     is_valid = false;
+            // }
 
-            if ( myThis.component.form_visit_add.model.haveSoreThroat === 0 ) {
+            if (myThis.component.form_visit_add.model.haveSoreThroat === 0) {
                 myThis.component.form_visit_add.model_error.haveSoreThroat.errors.push({ message: 'Have Sore Throat or not?' });
                 is_valid = false;
             }
-            if ( (myThis.component.form_visit_add.model.daysSoreThroat.toString().trim().length > 2) ) {
-                myThis.component.form_visit_add.model_error.daysSoreThroat.errors.push({ message: 'SoreThroat days length must be between 1 and 2' });
-                is_valid = false;
-            }
+            // if ((myThis.component.form_visit_add.model.daysSoreThroat.toString().trim().length > 2)) {
+            //     myThis.component.form_visit_add.model_error.daysSoreThroat.errors.push({ message: 'SoreThroat days length must be between 1 and 2' });
+            //     is_valid = false;
+            // }
 
-            if ( myThis.component.form_visit_add.model.haveSmellProblem === 0 ) {
+            if (myThis.component.form_visit_add.model.haveSmellProblem === 0) {
                 myThis.component.form_visit_add.model_error.haveSmellProblem.errors.push({ message: 'Have Smell Problem or not?' });
                 is_valid = false;
             }
-            if ( (myThis.component.form_visit_add.model.daysSmellProblem.toString().trim().length > 2) ) {
-                myThis.component.form_visit_add.model_error.daysSmellProblem.errors.push({ message: 'SmellProblem days length must be between 1 and 2' });
-                is_valid = false;
-            }
+            // if ((myThis.component.form_visit_add.model.daysSmellProblem.toString().trim().length > 2)) {
+            //     myThis.component.form_visit_add.model_error.daysSmellProblem.errors.push({ message: 'SmellProblem days length must be between 1 and 2' });
+            //     is_valid = false;
+            // }
 
-            if ( myThis.component.form_visit_add.model.haveBreathProblem === 0 ) {
+            if (myThis.component.form_visit_add.model.haveBreathProblem === 0) {
                 myThis.component.form_visit_add.model_error.haveBreathProblem.errors.push({ message: 'Have Breath Problem or not?' });
                 is_valid = false;
             }
-            if ( (myThis.component.form_visit_add.model.daysBreathProblem.toString().trim().length > 2) ) {
-                myThis.component.form_visit_add.model_error.daysBreathProblem.errors.push({ message: 'BreathProblem days length must be between 1 and 2' });
-                is_valid = false;
-            }
+            // if ((myThis.component.form_visit_add.model.daysBreathProblem.toString().trim().length > 2)) {
+            //     myThis.component.form_visit_add.model_error.daysBreathProblem.errors.push({ message: 'BreathProblem days length must be between 1 and 2' });
+            //     is_valid = false;
+            // }
 
-            if ( myThis.component.form_visit_add.model.haveBodyPain === 0 ) {
+            if (myThis.component.form_visit_add.model.haveBodyPain === 0) {
                 myThis.component.form_visit_add.model_error.haveBodyPain.errors.push({ message: 'Have Body Pain or not?' });
                 is_valid = false;
             }
-            if ( (myThis.component.form_visit_add.model.daysBodyPain.toString().trim().length > 2) ) {
-                myThis.component.form_visit_add.model_error.daysBodyPain.errors.push({ message: 'BodyPain days length must be between 1 and 2' });
-                is_valid = false;
-            }
+            // if ((myThis.component.form_visit_add.model.daysBodyPain.toString().trim().length > 2)) {
+            //     myThis.component.form_visit_add.model_error.daysBodyPain.errors.push({ message: 'BodyPain days length must be between 1 and 2' });
+            //     is_valid = false;
+            // }
 
-            if ( myThis.component.form_visit_add.model.haveChestPain === 0 ) {
+            if (myThis.component.form_visit_add.model.haveChestPain === 0) {
                 myThis.component.form_visit_add.model_error.haveChestPain.errors.push({ message: 'Have Chest Pain or not?' });
                 is_valid = false;
             }
-            if ( (myThis.component.form_visit_add.model.daysChestPain.toString().trim().length > 2) ) {
-                myThis.component.form_visit_add.model_error.daysChestPain.errors.push({ message: 'ChestPain days length must be between 1 and 2' });
-                is_valid = false;
-            }
+            // if ((myThis.component.form_visit_add.model.daysChestPain.toString().trim().length > 2)) {
+            //     myThis.component.form_visit_add.model_error.daysChestPain.errors.push({ message: 'ChestPain days length must be between 1 and 2' });
+            //     is_valid = false;
+            // }
 
-            if ( myThis.component.form_visit_add.model.haveDiarrheoa === 0 ) {
+            if (myThis.component.form_visit_add.model.haveDiarrheoa === 0) {
                 myThis.component.form_visit_add.model_error.haveDiarrheoa.errors.push({ message: 'Have Diarrhea or not?' });
                 is_valid = false;
             }
-            if ( (myThis.component.form_visit_add.model.daysDiarrheoa.toString().trim().length > 2) ) {
-                myThis.component.form_visit_add.model_error.daysDiarrheoa.errors.push({ message: 'Diarrheoa days length must be between 1 and 2' });
-                is_valid = false;
-            }
+            // if ((myThis.component.form_visit_add.model.daysDiarrheoa.toString().trim().length > 2)) {
+            //     myThis.component.form_visit_add.model_error.daysDiarrheoa.errors.push({ message: 'Diarrheoa days length must be between 1 and 2' });
+            //     is_valid = false;
+            // }
 
-            if ( myThis.component.form_visit_add.model.haveFever === 0 ) {
+            if (myThis.component.form_visit_add.model.haveFever === 0) {
                 myThis.component.form_visit_add.model_error.haveFever.errors.push({ message: 'Have Fever or not?' });
                 is_valid = false;
             }
-            if ( (myThis.component.form_visit_add.model.daysFever.toString().trim().length > 2) ) {
-                myThis.component.form_visit_add.model_error.daysFever.errors.push({ message: 'Fever days length must be between 1 and 2' });
-                is_valid = false;
-            }
+            // if ((myThis.component.form_visit_add.model.daysFever.toString().trim().length > 2)) {
+            //     myThis.component.form_visit_add.model_error.daysFever.errors.push({ message: 'Fever days length must be between 1 and 2' });
+            //     is_valid = false;
+            // }
 
 
             return is_valid;
@@ -306,18 +306,18 @@ export class AddVisitPage implements OnInit {
             myThis.component.form_visit_add.model_error = {};
             const form_visit_add_validate = myThis.component.form_visit_add.validate();
             console.log('form_visit_add_validate ----- ', form_visit_add_validate);
-            if ( form_visit_add_validate === true ) {
+            if (form_visit_add_validate === true) {
                 myThis.component.form_visit_add.is_processing = true;
-                this.geolocationServiceP.get_current_latitude_longitude(( error_p, result_p ) => {
-                    if ( error_p ) {
+                this.geolocationServiceP.get_current_latitude_longitude((error_p, result_p) => {
+                    if (error_p) {
                         console.log('get_current_latitude_longitude - error_p ----- ', error_p);
                         myThis.component.form_visit_add.is_processing = false;
                     }
-                    if ( result_p ) {
+                    if (result_p) {
                         myThis.component.form_visit_add.model.latitude = result_p.latitude;
                         myThis.component.form_visit_add.model.longitude = result_p.longitude;
 
-                        myThis.service.visit_add(myThis.component.form_visit_add.model, ( error_p, result_p ) => {
+                        myThis.service.visit_add(myThis.component.form_visit_add.model, (error_p, result_p) => {
                             myThis.component.form_visit_add.model_reset();
                             myThis.component.form_visit_add.is_processing = false;
                             if (error_p) {
