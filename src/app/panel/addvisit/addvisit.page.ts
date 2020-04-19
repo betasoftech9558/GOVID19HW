@@ -133,12 +133,12 @@ export class AddVisitPage implements OnInit {
             let is_valid = true;
             myThis.component.form_visit_add.model_error_reset();
             if (myThis.component.form_visit_add.model.Name.toString().trim() === '') {
-                myThis.component.form_visit_add.model_error.Name.errors.push({ message: 'Full Name is required' });
+                myThis.component.form_visit_add.model_error.Name.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
 
             if (myThis.component.form_visit_add.model.ContactNumber.toString().trim() === '') {
-                myThis.component.form_visit_add.model_error.ContactNumber.errors.push({ message: 'Contact Number is required' });
+                myThis.component.form_visit_add.model_error.ContactNumber.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
             // if ( myThis.component.form_visit_add.model.ContactNumber.toString().trim().length !== 10 ) {
@@ -147,7 +147,7 @@ export class AddVisitPage implements OnInit {
             // }
 
             if (myThis.component.form_visit_add.model.Age.toString().trim() === '') {
-                myThis.component.form_visit_add.model_error.Age.errors.push({ message: 'Age is required' });
+                myThis.component.form_visit_add.model_error.Age.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
             // if ( (myThis.component.form_visit_add.model.Age.toString().trim().length < 1) || (myThis.component.form_visit_add.model.Age.toString().trim().length > 2) ) {
@@ -156,22 +156,22 @@ export class AddVisitPage implements OnInit {
             // }
 
             if (myThis.component.form_visit_add.model.Gender === 0) {
-                myThis.component.form_visit_add.model_error.Gender.errors.push({ message: 'Gender is required' });
+                myThis.component.form_visit_add.model_error.Gender.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
 
             if (myThis.component.form_visit_add.model.Addresss.toString().trim() === '') {
-                myThis.component.form_visit_add.model_error.Addresss.errors.push({ message: 'Addresss is required' });
+                myThis.component.form_visit_add.model_error.Addresss.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
 
             if (myThis.component.form_visit_add.model.Pincode.toString().trim() === '') {
-                myThis.component.form_visit_add.model_error.Pincode.errors.push({ message: 'Pincode is required' });
+                myThis.component.form_visit_add.model_error.Pincode.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
 
             if (myThis.component.form_visit_add.model.haveDiabetes === 0) {
-                myThis.component.form_visit_add.model_error.haveDiabetes.errors.push({ message: 'Have Diabetes or not?' });
+                myThis.component.form_visit_add.model_error.haveDiabetes.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
             // if ((myThis.component.form_visit_add.model.daysDiabetes.toString().trim().length > 2)) {
@@ -180,7 +180,7 @@ export class AddVisitPage implements OnInit {
             // }
 
             if (myThis.component.form_visit_add.model.haveBP === 0) {
-                myThis.component.form_visit_add.model_error.haveBP.errors.push({ message: 'Have BP or not?' });
+                myThis.component.form_visit_add.model_error.haveBP.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
             // if ((myThis.component.form_visit_add.model.daysBP.toString().trim().length > 2)) {
@@ -189,7 +189,7 @@ export class AddVisitPage implements OnInit {
             // }
 
             if (myThis.component.form_visit_add.model.haveHeartProblem === 0) {
-                myThis.component.form_visit_add.model_error.haveHeartProblem.errors.push({ message: 'Have Heart Problem or not?' });
+                myThis.component.form_visit_add.model_error.haveHeartProblem.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
             // if ((myThis.component.form_visit_add.model.daysHeartProblem.toString().trim().length > 2)) {
@@ -198,7 +198,7 @@ export class AddVisitPage implements OnInit {
             // }
 
             if (myThis.component.form_visit_add.model.haveLungsProblem === 0) {
-                myThis.component.form_visit_add.model_error.haveLungsProblem.errors.push({ message: 'Have Lungs Problem or not?' });
+                myThis.component.form_visit_add.model_error.haveLungsProblem.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
             // if ((myThis.component.form_visit_add.model.daysLungsProblem.toString().trim().length > 2)) {
@@ -207,7 +207,7 @@ export class AddVisitPage implements OnInit {
             // }
 
             if (myThis.component.form_visit_add.model.haveKidenyProblem === 0) {
-                myThis.component.form_visit_add.model_error.haveKidenyProblem.errors.push({ message: 'Have Kidney Problem or not?' });
+                myThis.component.form_visit_add.model_error.haveKidenyProblem.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
             // if ((myThis.component.form_visit_add.model.daysKidenyProblem.toString().trim().length > 2)) {
@@ -216,7 +216,7 @@ export class AddVisitPage implements OnInit {
             // }
 
             if (myThis.component.form_visit_add.model.haveCough === 0) {
-                myThis.component.form_visit_add.model_error.haveCough.errors.push({ message: 'Have Cough or not?' });
+                myThis.component.form_visit_add.model_error.haveCough.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
             // if ((myThis.component.form_visit_add.model.daysCough.toString().trim().length > 2)) {
@@ -225,7 +225,7 @@ export class AddVisitPage implements OnInit {
             // }
 
             if (myThis.component.form_visit_add.model.haveDryCough === 0) {
-                myThis.component.form_visit_add.model_error.haveDryCough.errors.push({ message: 'Have Dry Cough or not?' });
+                myThis.component.form_visit_add.model_error.haveDryCough.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
             // if ((myThis.component.form_visit_add.model.daysDryCough.toString().trim().length > 2)) {
@@ -234,7 +234,7 @@ export class AddVisitPage implements OnInit {
             // }
 
             if (myThis.component.form_visit_add.model.haveSoreThroat === 0) {
-                myThis.component.form_visit_add.model_error.haveSoreThroat.errors.push({ message: 'Have Sore Throat or not?' });
+                myThis.component.form_visit_add.model_error.haveSoreThroat.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
             // if ((myThis.component.form_visit_add.model.daysSoreThroat.toString().trim().length > 2)) {
@@ -243,7 +243,7 @@ export class AddVisitPage implements OnInit {
             // }
 
             if (myThis.component.form_visit_add.model.haveSmellProblem === 0) {
-                myThis.component.form_visit_add.model_error.haveSmellProblem.errors.push({ message: 'Have Smell Problem or not?' });
+                myThis.component.form_visit_add.model_error.haveSmellProblem.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
             // if ((myThis.component.form_visit_add.model.daysSmellProblem.toString().trim().length > 2)) {
@@ -252,7 +252,7 @@ export class AddVisitPage implements OnInit {
             // }
 
             if (myThis.component.form_visit_add.model.haveBreathProblem === 0) {
-                myThis.component.form_visit_add.model_error.haveBreathProblem.errors.push({ message: 'Have Breath Problem or not?' });
+                myThis.component.form_visit_add.model_error.haveBreathProblem.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
             // if ((myThis.component.form_visit_add.model.daysBreathProblem.toString().trim().length > 2)) {
@@ -261,7 +261,7 @@ export class AddVisitPage implements OnInit {
             // }
 
             if (myThis.component.form_visit_add.model.haveBodyPain === 0) {
-                myThis.component.form_visit_add.model_error.haveBodyPain.errors.push({ message: 'Have Body Pain or not?' });
+                myThis.component.form_visit_add.model_error.haveBodyPain.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
             // if ((myThis.component.form_visit_add.model.daysBodyPain.toString().trim().length > 2)) {
@@ -270,7 +270,7 @@ export class AddVisitPage implements OnInit {
             // }
 
             if (myThis.component.form_visit_add.model.haveChestPain === 0) {
-                myThis.component.form_visit_add.model_error.haveChestPain.errors.push({ message: 'Have Chest Pain or not?' });
+                myThis.component.form_visit_add.model_error.haveChestPain.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
             // if ((myThis.component.form_visit_add.model.daysChestPain.toString().trim().length > 2)) {
@@ -279,7 +279,7 @@ export class AddVisitPage implements OnInit {
             // }
 
             if (myThis.component.form_visit_add.model.haveDiarrheoa === 0) {
-                myThis.component.form_visit_add.model_error.haveDiarrheoa.errors.push({ message: 'Have Diarrhea or not?' });
+                myThis.component.form_visit_add.model_error.haveDiarrheoa.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
             // if ((myThis.component.form_visit_add.model.daysDiarrheoa.toString().trim().length > 2)) {
@@ -288,7 +288,7 @@ export class AddVisitPage implements OnInit {
             // }
 
             if (myThis.component.form_visit_add.model.haveFever === 0) {
-                myThis.component.form_visit_add.model_error.haveFever.errors.push({ message: 'Have Fever or not?' });
+                myThis.component.form_visit_add.model_error.haveFever.errors.push({ message: 'આ માહિતી જરૂરી છે.' });
                 is_valid = false;
             }
             // if ((myThis.component.form_visit_add.model.daysFever.toString().trim().length > 2)) {

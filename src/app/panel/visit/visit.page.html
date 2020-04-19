@@ -48,15 +48,19 @@
             </h2>
             <h3 style="padding-left: 20px;">{{(visit.ContactNumber)}}</h3>
             <!-- <p style="padding-left: 20px; white-space: break-spaces;">{{(visit.Addresss)}} - {{visit.Pincode}}</p> -->
-            <p style="padding-left: 20px; white-space:break-spaces;width:100%;">
-              <!-- <div style="width:50% !important;">
-                <strong>Severity Level :</strong>
+            <p style="padding-left: 20px; white-space:break-spaces;">
+              <strong>Pincode :</strong>
+              {{visit.Pincode}}
+            </p>
+            <p style="padding-left: 20px; white-space:break-spaces;">
+              <span> <strong>Severity Level :</strong>
                 {{visit.SeverityLevel}}
-              </div>
-              <div style="width:50% !important;">
-                <strong>IS SOS :</strong>
-                {{visit.IsSOS}}
-              </div> -->
+              </span>
+              <span style="float:right">
+                <strong>SOS : </strong>
+                <span *ngIf="visit.IsSOS">YES</span>
+                <span *ngIf="!visit.IsSOS">NO</span>
+              </span>
             </p>
           </ion-label>
         </ion-item>

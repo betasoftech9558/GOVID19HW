@@ -32,8 +32,10 @@
               {{ error.message }}
             </ion-text>
           </ng-container>
+
         </ion-item>
-        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+
+        <div style="background-color: #d7d8da !important; height: 1px !important;"></div>
         <ion-item lines="none">
           <!-- <ion-label position="stacked">Contact:</ion-label> -->
           <ion-label position="stacked"><strong class="f-20">મોબાઇલ નં. :</strong></ion-label>
@@ -48,7 +50,8 @@
             </ion-text>
           </ng-container>
         </ion-item>
-        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+
+        <div style="background-color: #d7d8da !important; height: 1px !important;"></div>
         <ion-item lines="none">
           <!-- <ion-label position="stacked">Age:</ion-label> -->
           <ion-label position="stacked"><strong class="f-20">ઉંમર :</strong></ion-label>
@@ -63,7 +66,8 @@
             </ion-text>
           </ng-container>
         </ion-item>
-        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+
+        <div style="background-color: #d7d8da !important; height: 1px !important;"></div>
         <ion-item lines="none">
           <ion-label position="stacked" style="margin-bottom: 1px !important;">
             <strong class="f-20">જાતિ : </strong>
@@ -85,7 +89,6 @@
               </ion-col>
             </ion-row>
           </ion-radio-group>
-
           <ng-container
             *ngIf="component.form_visit_add.model_error.Gender && component.form_visit_add.model_error.Gender.errors && component.form_visit_add.model_error.Gender.errors.length">
             <ion-text *ngFor="let error of component.form_visit_add.model_error.Gender.errors" color="danger">
@@ -93,7 +96,8 @@
             </ion-text>
           </ng-container>
         </ion-item>
-        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+
+        <div style="background-color: #d7d8da !important; height: 1px !important;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">એડ્રેસ :</strong></ion-label>
@@ -107,7 +111,7 @@
             </ion-text>
           </ng-container>
         </ion-item>
-        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+        <div style="background-color: #d7d8da !important; height: 1px !important;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">પીન કોડ : </strong></ion-label>
@@ -140,7 +144,7 @@
             <ion-row>
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>Yes</ion-label>
+                  <ion-label>હા</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true">
                   </ion-radio>
                 </ion-item>
@@ -148,7 +152,7 @@
 
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>No</ion-label>
+                  <ion-label>ના</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
               </ion-col>
@@ -168,15 +172,7 @@
             </ion-text>
           </ion-item>
         </ng-container>
-        <ng-container
-          *ngIf="component.form_visit_add.model_error.daysDiabetes && component.form_visit_add.model_error.daysDiabetes.errors && component.form_visit_add.model_error.daysDiabetes.errors.length">
-          <ion-item lines="none">
-            <ion-text *ngFor="let error of component.form_visit_add.model_error.daysDiabetes.errors" color="danger">
-              {{ error.message }}
-            </ion-text>
-          </ion-item>
-        </ng-container>
-        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+        <div style="background-color: #d7d8da !important; height: 1px !important;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">B.P.:</strong></ion-label>
@@ -186,14 +182,14 @@
             <ion-row>
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>Yes</ion-label>
+                  <ion-label>હા</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>No</ion-label>
+                  <ion-label>ના</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
               </ion-col>
@@ -212,15 +208,7 @@
             </ion-text>
           </ion-item>
         </ng-container>
-        <ng-container
-          *ngIf="component.form_visit_add.model_error.daysBP && component.form_visit_add.model_error.daysBP.errors && component.form_visit_add.model_error.daysBP.errors.length">
-          <ion-item lines="none">
-            <ion-text *ngFor="let error of component.form_visit_add.model_error.daysBP.errors" color="danger">
-              {{ error.message }}
-            </ion-text>
-          </ion-item>
-        </ng-container>
-        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+        <div style="background-color: #d7d8da !important; height: 1px !important;"></div>
         <ion-item lines="none">
           <ion-label position="stacked"><strong class="f-20">હૃદય રોગ સંબંધિત તકલીફ :</strong></ion-label>
         </ion-item>
@@ -230,14 +218,14 @@
             <ion-row>
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>Yes</ion-label>
+                  <ion-label>હા</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>No</ion-label>
+                  <ion-label>ના</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
               </ion-col>
@@ -256,15 +244,7 @@
             </ion-text>
           </ion-item>
         </ng-container>
-        <ng-container
-          *ngIf="component.form_visit_add.model_error.daysHeartProblem && component.form_visit_add.model_error.daysHeartProblem.errors && component.form_visit_add.model_error.daysHeartProblem.errors.length">
-          <ion-item lines="none">
-            <ion-text *ngFor="let error of component.form_visit_add.model_error.daysHeartProblem.errors" color="danger">
-              {{ error.message }}
-            </ion-text>
-          </ion-item>
-        </ng-container>
-        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+        <div style="background-color: #d7d8da !important; height: 1px !important;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">ફેફસા સંબંધિત તકલીફ :</strong></ion-label>
@@ -275,14 +255,14 @@
             <ion-row>
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>Yes</ion-label>
+                  <ion-label>હા</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>No</ion-label>
+                  <ion-label>ના</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
               </ion-col>
@@ -301,15 +281,7 @@
             </ion-text>
           </ion-item>
         </ng-container>
-        <ng-container
-          *ngIf="component.form_visit_add.model_error.daysLungsProblem && component.form_visit_add.model_error.daysLungsProblem.errors && component.form_visit_add.model_error.daysLungsProblem.errors.length">
-          <ion-item lines="none">
-            <ion-text *ngFor="let error of component.form_visit_add.model_error.daysLungsProblem.errors" color="danger">
-              {{ error.message }}
-            </ion-text>
-          </ion-item>
-        </ng-container>
-        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+        <div style="background-color: #d7d8da !important; height: 1px !important;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">કિડની સંબંધિત તકલીફ :</strong></ion-label>
@@ -320,14 +292,14 @@
             <ion-row>
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>Yes</ion-label>
+                  <ion-label>હા</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>No</ion-label>
+                  <ion-label>ના</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
               </ion-col>
@@ -342,15 +314,6 @@
           *ngIf="component.form_visit_add.model_error.haveKidenyProblem && component.form_visit_add.model_error.haveKidenyProblem.errors && component.form_visit_add.model_error.haveKidenyProblem.errors.length">
           <ion-item lines="none">
             <ion-text *ngFor="let error of component.form_visit_add.model_error.haveKidenyProblem.errors"
-              color="danger">
-              {{ error.message }}
-            </ion-text>
-          </ion-item>
-        </ng-container>
-        <ng-container
-          *ngIf="component.form_visit_add.model_error.daysKidenyProblem && component.form_visit_add.model_error.daysKidenyProblem.errors && component.form_visit_add.model_error.daysKidenyProblem.errors.length">
-          <ion-item lines="none">
-            <ion-text *ngFor="let error of component.form_visit_add.model_error.daysKidenyProblem.errors"
               color="danger">
               {{ error.message }}
             </ion-text>
@@ -373,14 +336,14 @@
             <ion-row>
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>Yes</ion-label>
+                  <ion-label>હા</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>No</ion-label>
+                  <ion-label>ના</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
               </ion-col>
@@ -399,15 +362,7 @@
             </ion-text>
           </ion-item>
         </ng-container>
-        <ng-container
-          *ngIf="component.form_visit_add.model_error.daysCough && component.form_visit_add.model_error.daysCough.errors && component.form_visit_add.model_error.daysCough.errors.length">
-          <ion-item lines="none">
-            <ion-text *ngFor="let error of component.form_visit_add.model_error.daysCough.errors" color="danger">
-              {{ error.message }}
-            </ion-text>
-          </ion-item>
-        </ng-container>
-        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+        <div style="background-color: #d7d8da !important; height: 1px !important;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">સૂકી ઉધરસ : </strong></ion-label>
@@ -418,14 +373,14 @@
             <ion-row>
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>Yes</ion-label>
+                  <ion-label>હા</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>No</ion-label>
+                  <ion-label>ના</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
               </ion-col>
@@ -444,15 +399,7 @@
             </ion-text>
           </ion-item>
         </ng-container>
-        <ng-container
-          *ngIf="component.form_visit_add.model_error.daysDryCough && component.form_visit_add.model_error.daysDryCough.errors && component.form_visit_add.model_error.daysDryCough.errors.length">
-          <ion-item lines="none">
-            <ion-text *ngFor="let error of component.form_visit_add.model_error.daysDryCough.errors" color="danger">
-              {{ error.message }}
-            </ion-text>
-          </ion-item>
-        </ng-container>
-        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+        <div style="background-color: #d7d8da !important; height: 1px !important;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">ગળા ની ખરાશ : </strong></ion-label>
@@ -463,14 +410,14 @@
             <ion-row>
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>Yes</ion-label>
+                  <ion-label>હા</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>No</ion-label>
+                  <ion-label>ના</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
               </ion-col>
@@ -489,17 +436,9 @@
             </ion-text>
           </ion-item>
         </ng-container>
-        <ng-container
-          *ngIf="component.form_visit_add.model_error.daysSoreThroat && component.form_visit_add.model_error.daysSoreThroat.errors && component.form_visit_add.model_error.daysSoreThroat.errors.length">
-          <ion-item lines="none">
-            <ion-text *ngFor="let error of component.form_visit_add.model_error.daysSoreThroat.errors" color="danger">
-              {{ error.message }}
-            </ion-text>
-          </ion-item>
-        </ng-container>
-        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+        <div style="background-color: #d7d8da !important; height: 1px !important;"></div>
         <ion-item lines="none">
-          <ion-label position="stacked"><strong class="f-20">સુંઘવાની શક્તિ નબળી પડી ગઇ છે કે કેમ? :</strong>
+          <ion-label position="stacked"><strong class="f-20">સુંઘવાની શક્તિ નબળી પડી ગઇ છે ? :</strong>
           </ion-label>
         </ion-item>
         <ion-item lines="none">
@@ -508,14 +447,14 @@
             <ion-row>
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>Yes</ion-label>
+                  <ion-label>હા</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>No</ion-label>
+                  <ion-label>ના</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
               </ion-col>
@@ -534,15 +473,7 @@
             </ion-text>
           </ion-item>
         </ng-container>
-        <ng-container
-          *ngIf="component.form_visit_add.model_error.daysSmellProblem && component.form_visit_add.model_error.daysSmellProblem.errors && component.form_visit_add.model_error.daysSmellProblem.errors.length">
-          <ion-item lines="none">
-            <ion-text *ngFor="let error of component.form_visit_add.model_error.daysSmellProblem.errors" color="danger">
-              {{ error.message }}
-            </ion-text>
-          </ion-item>
-        </ng-container>
-        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+        <div style="background-color: #dad9d7 !important; height: 1px;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">
@@ -555,14 +486,14 @@
             <ion-row>
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>Yes</ion-label>
+                  <ion-label>હા</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>No</ion-label>
+                  <ion-label>ના</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
               </ion-col>
@@ -582,16 +513,7 @@
             </ion-text>
           </ion-item>
         </ng-container>
-        <ng-container
-          *ngIf="component.form_visit_add.model_error.daysBreathProblem && component.form_visit_add.model_error.daysBreathProblem.errors && component.form_visit_add.model_error.daysBreathProblem.errors.length">
-          <ion-item lines="none">
-            <ion-text *ngFor="let error of component.form_visit_add.model_error.daysBreathProblem.errors"
-              color="danger">
-              {{ error.message }}
-            </ion-text>
-          </ion-item>
-        </ng-container>
-        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+        <div style="background-color: #d7d8da !important; height: 1px !important;"></div>
         <ion-item lines="none">
           <ion-label position="stacked"><strong class="f-20">શારિરીક નબળાઈ : </strong></ion-label>
         </ion-item>
@@ -601,14 +523,14 @@
             <ion-row>
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>Yes</ion-label>
+                  <ion-label>હા</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>No</ion-label>
+                  <ion-label>ના</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
               </ion-col>
@@ -627,15 +549,7 @@
             </ion-text>
           </ion-item>
         </ng-container>
-        <ng-container
-          *ngIf="component.form_visit_add.model_error.daysBodyPain && component.form_visit_add.model_error.daysBodyPain.errors && component.form_visit_add.model_error.daysBodyPain.errors.length">
-          <ion-item lines="none">
-            <ion-text *ngFor="let error of component.form_visit_add.model_error.daysBodyPain.errors" color="danger">
-              {{ error.message }}
-            </ion-text>
-          </ion-item>
-        </ng-container>
-        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+        <div style="background-color: #d7d8da !important; height: 1px !important;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">
@@ -648,14 +562,14 @@
             <ion-row>
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>Yes</ion-label>
+                  <ion-label>હા</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>No</ion-label>
+                  <ion-label>ના</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
               </ion-col>
@@ -674,15 +588,7 @@
             </ion-text>
           </ion-item>
         </ng-container>
-        <ng-container
-          *ngIf="component.form_visit_add.model_error.daysChestPain && component.form_visit_add.model_error.daysChestPain.errors && component.form_visit_add.model_error.daysChestPain.errors.length">
-          <ion-item lines="none">
-            <ion-text *ngFor="let error of component.form_visit_add.model_error.daysChestPain.errors" color="danger">
-              {{ error.message }}
-            </ion-text>
-          </ion-item>
-        </ng-container>
-        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+        <div style="background-color: #d7d8da !important; height: 1px !important;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">ઝાડા : </strong></ion-label>
@@ -693,14 +599,14 @@
             <ion-row>
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>Yes</ion-label>
+                  <ion-label>હા</ion-label>
                   <ion-radio slot="start" color="danger" [value]="true"></ion-radio>
                 </ion-item>
               </ion-col>
 
               <ion-col size-md="6">
                 <ion-item lines="none" class="m-l-25">
-                  <ion-label>No</ion-label>
+                  <ion-label>ના</ion-label>
                   <ion-radio slot="start" color="danger" [value]="false"></ion-radio>
                 </ion-item>
               </ion-col>
@@ -719,15 +625,7 @@
             </ion-text>
           </ion-item>
         </ng-container>
-        <ng-container
-          *ngIf="component.form_visit_add.model_error.daysDiarrheoa && component.form_visit_add.model_error.daysDiarrheoa.errors && component.form_visit_add.model_error.daysDiarrheoa.errors.length">
-          <ion-item lines="none">
-            <ion-text *ngFor="let error of component.form_visit_add.model_error.daysDiarrheoa.errors" color="danger">
-              {{ error.message }}
-            </ion-text>
-          </ion-item>
-        </ng-container>
-        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+        <div style="background-color: #d7d8da !important; height: 1px !important;"></div>
         <ion-item lines="none">
           <ion-label position="stacked">
             <strong class="f-20">તાવ : </strong></ion-label>
@@ -763,21 +661,12 @@
             </ion-text>
           </ion-item>
         </ng-container>
-        <ng-container
-          *ngIf="component.form_visit_add.model_error.daysFever && component.form_visit_add.model_error.daysFever.errors && component.form_visit_add.model_error.daysFever.errors.length">
-          <ion-item lines="none">
-            <ion-text *ngFor="let error of component.form_visit_add.model_error.daysFever.errors" color="danger">
-              {{ error.message }}
-            </ion-text>
-          </ion-item>
-        </ng-container>
-        <div style="background-color: #d7d8da !important; height: 1px;"></div>
+        <div style="background-color: #d7d8da !important; height: 1px !important;"></div>
         <ion-item lines="full">
           <ion-label>SOS:</ion-label>
           <ion-checkbox color="danger" name="IsSOS" [(ngModel)]="component.form_visit_add.model.IsSOS" #IsSOS="ngModel">
           </ion-checkbox>
         </ion-item>
-
         <ion-row>
           <ion-col>
             <ion-button type="submit" expand="full" size="default" color="danger"
